@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ProjektSemestralny</name>
+    </assembly>
+    <members>
+        <member name="T:ProjektSemestralny.Window1">
+            <summary>
+            Interaction logic for Window1.xaml
+            </summary>
+            <summary>
+            Window1
+            </summary>
+        </member>
+        <member name="M:ProjektSemestralny.Window1.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ProjektSemestralny.App">
+            <summary>
+            Interaction logic for App.xaml
+            </summary>
+            <summary>
+            App
+            </summary>
+        </member>
+        <member name="M:ProjektSemestralny.App.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:ProjektSemestralny.App.Main">
+            <summary>
+            Application Entry Point.
+            </summary>
+        </member>
+        <member name="T:ProjektSemestralny.MainWindow">
+            <summary>
+            Interaction logic for MainWindow.xaml
+            </summary>
+            <summary>
+            MainWindow
+            </summary>
+        </member>
+        <member name="M:ProjektSemestralny.MainWindow.#ctor">
+            <summary>
+            Login window initialization
+            </summary>
+        </member>
+        <member name="M:ProjektSemestralny.MainWindow.connectButton_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Method performing login to the database
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:ProjektSemestralny.MainWindow.downloadData">
+            <summary>
+            Method connecting to the database
+            </summary>
+        </member>
+        <member name="M:ProjektSemestralny.MainWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ProjektSemestralny.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:ProjektSemestralny.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:ProjektSemestralny.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+    </members>
+</doc>

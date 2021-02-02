@@ -5,8 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjektSemestralny"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="Connect to database" HorizontalAlignment="Center" VerticalAlignment="Top" Height="284" Width="400">
+    <Grid Margin="0,0,0,-8">
+
+        <TextBox x:Name="serverNametb" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="260" Margin="122,42,0,0"/>
+        <TextBox x:Name="databaseNametb" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="260" Margin="122,77,0,0"/>
+        <TextBox x:Name="logintb" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="260" Margin="122,112,0,0"/>
+        <PasswordBox x:Name="passwordtb" HorizontalAlignment="Left" VerticalAlignment="Top" Height="30" Width="260" Margin="122,147,0,0"/>
+
+        <Label Content="Server name:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="12,42,0,0" Width="105" Height="30"/>
+        <Label Content="Password:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,147,0,0" Width="95" Height="30"/>
+        <Label Content="Login:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,112,0,0" Width="95" Height="30"/>
+        <Label Content="Database name:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="12,77,0,0" Width="105" Height="30"/>
+        <Button x:Name="connectButton" Content="Connect" HorizontalAlignment="Left" VerticalAlignment="Top" Width="260" Margin="122,194,0,0" Height="41" Click="connectButton_Click"/>
+
+
     </Grid>
 </Window>
