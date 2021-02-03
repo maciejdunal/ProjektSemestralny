@@ -11,25 +11,83 @@ namespace ProjektSemestralny
 {
     using System;
     using System.Collections.Generic;
-    
-    public partial class Pracownicy
+
+    /// <summary>
+    /// Class <c>Gry</c> contains values of 'Pracownicy' table
+    /// </summary>
+        public partial class Pracownicy
     {
+        /// <summary>
+        /// Constructs a new <see cref="Pracownicy"/> instance.
+        /// </summary>
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Pracownicy()
         {
             this.Wypozyczenias = new HashSet<Wypozyczenia>();
             this.Zwroties = new HashSet<Zwroty>();
         }
-    
+        /// <value>Gets the value of ID_pracownika</value>
         public int ID_pracownika { get; set; }
+        /// <value>Gets the value of Imie</value>
         public string Imie { get; set; }
+        /// <value>Gets the value of Nazwisko</value>
         public string Nazwisko { get; set; }
+        /// <value>Gets the value of Data_urodzenia</value>
         public System.DateTime Data_urodzenia { get; set; }
+        /// <value>Gets the value of Adres</value>
         public string Adres { get; set; }
+        /// <value>Gets the value of Stanowisko</value>
         public string Stanowisko { get; set; }
-    
+
+        /// <summary>
+        /// Contains all values of columns in <c>Wypozyczenia</c> table
+        /// <list type="table">
+        /// <item>
+        /// <term>ID_wypozyczenia</term>
+        /// <description>ID_wypozyczenia column</description>
+        /// </item>
+        /// <item>
+        /// <term>ID_Gry</term>
+        /// <description>ID_Gry column</description>
+        /// </item>
+        /// <item>
+        /// <term>ID_pracownika</term>
+        /// <description>ID_pracownika column</description>
+        /// </item>
+        /// <item>
+        /// <term>ID_klienta</term>
+        /// <description>ID_klienta column</description>
+        /// </item>
+        /// <item>
+        /// <term>Data_wypozyczenia</term>
+        /// <description>Data_wypozyczenia column</description>
+        /// </item>
+        /// </list>
+        /// </summary>
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Wypozyczenia> Wypozyczenias { get; set; }
+
+        /// <summary>
+        /// Contains all values of columns in <c>Zwroty</c> table
+        /// <list type="table">
+        /// <item>
+        /// <term>ID_wypozyczenia</term>
+        /// <description>ID_wypozyczenia column</description>
+        /// </item>
+        /// <item>
+        /// <term>ID_pracownika</term>
+        /// <description>ID_pracownika column</description>
+        /// </item>
+        /// <item>
+        /// <term>data_zwrotu</term>
+        /// <description>data_zwrotu column</description>
+        /// </item>
+        /// <item>
+        /// <term>doplaty</term>
+        /// <description>doplaty column</description>
+        /// </item>
+        /// </list>
+        /// </summary>
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Zwroty> Zwroties { get; set; }
     }

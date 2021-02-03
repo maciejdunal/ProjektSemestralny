@@ -4,6 +4,175 @@
         <name>ProjektSemestralny</name>
     </assembly>
     <members>
+        <member name="T:ProjektSemestralny.Gry">
+            <summary>
+            Class <c>Gry</c> contains values of 'Gry' table
+            </summary>
+        </member>
+        <member name="M:ProjektSemestralny.Gry.#ctor">
+            <summary>
+            Constructs a new <see cref="T:ProjektSemestralny.Gry"/> instance.
+            </summary>
+        </member>
+        <member name="P:ProjektSemestralny.Gry.ID_gry">
+            <value>Gets the value of ID_gry</value>
+        </member>
+        <member name="P:ProjektSemestralny.Gry.Nazwa">
+            <value>Gets the value of Nazwa</value>
+        </member>
+        <member name="P:ProjektSemestralny.Gry.Kategoria">
+            <value>Gets the value of Kategoria</value>
+        </member>
+        <member name="P:ProjektSemestralny.Gry.Kategoria_wiekowa">
+            <value>Gets the value of Kategoria_wiekowa</value>
+        </member>
+        <member name="P:ProjektSemestralny.Gry.Data_wydania">
+            <value>Gets the value of Data_wydania</value>
+        </member>
+        <member name="P:ProjektSemestralny.Gry.Cena_dzien">
+            <value>Gets the value of Cena_dzien</value>
+        </member>
+        <member name="P:ProjektSemestralny.Gry.Wypozyczenias">
+            <summary>
+            Contains all values of columns in <c>Wypozyczenia</c> table
+            <list type="table">
+            <item>
+            <term>ID_wypozyczenia</term>
+            <description>ID_wypozyczenia column</description>
+            </item>
+            <item>
+            <term>ID_Gry</term>
+            <description>ID_Gry column</description>
+            </item>
+            <item>
+            <term>ID_pracownika</term>
+            <description>ID_pracownika column</description>
+            </item>
+            <item>
+            <term>ID_klienta</term>
+            <description>ID_klienta column</description>
+            </item>
+            <item>
+            <term>Data_wypozyczenia</term>
+            <description>Data_wypozyczenia column</description>
+            </item>
+            </list>
+            </summary>
+        </member>
+        <member name="T:ProjektSemestralny.Klienci">
+            <summary>
+            Class <c>Gry</c> contains values of 'Klienci' table
+            </summary>
+        </member>
+        <member name="M:ProjektSemestralny.Klienci.#ctor">
+            <summary>
+            Constructs a new <see cref="T:ProjektSemestralny.Klienci"/> instance.
+            </summary>
+        </member>
+        <member name="P:ProjektSemestralny.Klienci.ID_klienta">
+            <value>Gets the value of ID_klienta</value>
+        </member>
+        <member name="P:ProjektSemestralny.Klienci.Nazwisko">
+            <value>Gets the value of Nazwisko</value>
+        </member>
+        <member name="P:ProjektSemestralny.Klienci.Imie">
+            <value>Gets the value of Imie</value>
+        </member>
+        <member name="P:ProjektSemestralny.Klienci.Adres">
+            <value>Gets the value of Adres</value>
+        </member>
+        <member name="P:ProjektSemestralny.Klienci.Kod_pocztowy">
+            <value>Gets the value of Kod_pocztowy</value>
+        </member>
+        <member name="P:ProjektSemestralny.Klienci.Data_urodzenia">
+            <value>Gets the value of Data_urodzenia</value>
+        </member>
+        <member name="P:ProjektSemestralny.Klienci.Numer_DO">
+            <value>Gets the value of Number_DO</value>
+        </member>
+        <member name="P:ProjektSemestralny.Klienci.Wypozyczenias">
+            <summary>
+            Gets values of <c>Wypozyczenia</c> table
+            </summary>
+        </member>
+        <member name="T:ProjektSemestralny.Pracownicy">
+            <summary>
+            Class <c>Gry</c> contains values of 'Pracownicy' table
+            </summary>
+        </member>
+        <member name="M:ProjektSemestralny.Pracownicy.#ctor">
+            <summary>
+            Constructs a new <see cref="T:ProjektSemestralny.Pracownicy"/> instance.
+            </summary>
+        </member>
+        <member name="P:ProjektSemestralny.Pracownicy.ID_pracownika">
+            <value>Gets the value of ID_pracownika</value>
+        </member>
+        <member name="P:ProjektSemestralny.Pracownicy.Imie">
+            <value>Gets the value of Imie</value>
+        </member>
+        <member name="P:ProjektSemestralny.Pracownicy.Nazwisko">
+            <value>Gets the value of Nazwisko</value>
+        </member>
+        <member name="P:ProjektSemestralny.Pracownicy.Data_urodzenia">
+            <value>Gets the value of Data_urodzenia</value>
+        </member>
+        <member name="P:ProjektSemestralny.Pracownicy.Adres">
+            <value>Gets the value of Adres</value>
+        </member>
+        <member name="P:ProjektSemestralny.Pracownicy.Stanowisko">
+            <value>Gets the value of Stanowisko</value>
+        </member>
+        <member name="P:ProjektSemestralny.Pracownicy.Wypozyczenias">
+            <summary>
+            Contains all values of columns in <c>Wypozyczenia</c> table
+            <list type="table">
+            <item>
+            <term>ID_wypozyczenia</term>
+            <description>ID_wypozyczenia column</description>
+            </item>
+            <item>
+            <term>ID_Gry</term>
+            <description>ID_Gry column</description>
+            </item>
+            <item>
+            <term>ID_pracownika</term>
+            <description>ID_pracownika column</description>
+            </item>
+            <item>
+            <term>ID_klienta</term>
+            <description>ID_klienta column</description>
+            </item>
+            <item>
+            <term>Data_wypozyczenia</term>
+            <description>Data_wypozyczenia column</description>
+            </item>
+            </list>
+            </summary>
+        </member>
+        <member name="P:ProjektSemestralny.Pracownicy.Zwroties">
+            <summary>
+            Contains all values of columns in <c>Zwroty</c> table
+            <list type="table">
+            <item>
+            <term>ID_wypozyczenia</term>
+            <description>ID_wypozyczenia column</description>
+            </item>
+            <item>
+            <term>ID_pracownika</term>
+            <description>ID_pracownika column</description>
+            </item>
+            <item>
+            <term>data_zwrotu</term>
+            <description>data_zwrotu column</description>
+            </item>
+            <item>
+            <term>doplaty</term>
+            <description>doplaty column</description>
+            </item>
+            </list>
+            </summary>
+        </member>
         <member name="T:ProjektSemestralny.Window1">
             <summary>
             Interaction logic for Window1.xaml
@@ -15,6 +184,73 @@
         <member name="M:ProjektSemestralny.Window1.InitializeComponent">
             <summary>
             InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ProjektSemestralny.Wypozyczenia">
+            <summary>
+            Class <c>Wypozyczenia</c> contains values of 'Wypozyczenia' table
+            </summary>
+        </member>
+        <member name="P:ProjektSemestralny.Wypozyczenia.ID_wypozyczenia">
+            <value>Gets the value of ID_wypozyczenia</value>
+        </member>
+        <member name="P:ProjektSemestralny.Wypozyczenia.ID_Gry">
+            <value>Gets the value of ID_Gry</value>
+        </member>
+        <member name="P:ProjektSemestralny.Wypozyczenia.ID_pracownika">
+            <value>Gets the value of ID_pracownika</value>
+        </member>
+        <member name="P:ProjektSemestralny.Wypozyczenia.ID_klienta">
+            <value>Gets the value of ID_klienta</value>
+        </member>
+        <member name="P:ProjektSemestralny.Wypozyczenia.Data_wypozyczenia">
+            <value>Gets the value of Data_wypozyczenia</value>
+        </member>
+        <member name="P:ProjektSemestralny.Wypozyczenia.Gry">
+            <summary>
+            <value>Gets <c>Gryy</c>virtual properties</value>
+            </summary>
+        </member>
+        <member name="P:ProjektSemestralny.Wypozyczenia.Klienci">
+            <summary>
+            <value>Gets<c>Klienci</c>virtual properties</value>
+            </summary>
+        </member>
+        <member name="P:ProjektSemestralny.Wypozyczenia.Pracownicy">
+            <summary>
+            <value>Gets <c>Pracownicy</c>virtual properties</value>
+            </summary>
+        </member>
+        <member name="P:ProjektSemestralny.Wypozyczenia.Zwroty">
+            <summary>
+            <value>Gets <c>Zwroty</c> virtual properties</value>
+            </summary>
+        </member>
+        <member name="T:ProjektSemestralny.Zwroty">
+            <summary>
+            Class <c>Zwroty</c> contains values of 'Zwroty' table
+            </summary>
+        </member>
+        <member name="P:ProjektSemestralny.Zwroty.ID_wypozyczenia">
+            <value>Gets the value of ID_wypozyczenia</value>
+        </member>
+        <member name="P:ProjektSemestralny.Zwroty.ID_pracownika">
+            <value>Gets the value of ID_pracownika</value>
+        </member>
+        <member name="P:ProjektSemestralny.Zwroty.data_zwrotu">
+            <value>Gets the value of data_zwrotu</value>
+        </member>
+        <member name="P:ProjektSemestralny.Zwroty.doplaty">
+            <value>Gets the value of doplaty</value>
+        </member>
+        <member name="P:ProjektSemestralny.Zwroty.Pracownicy">
+            <summary>
+            <value>Gets <c>Pracownicy</c>virtual properties</value>
+            </summary>
+        </member>
+        <member name="P:ProjektSemestralny.Zwroty.Wypozyczenia">
+            <summary>
+            <value>Gets <c>Wypozyczenia</c>virtual properties</value>
             </summary>
         </member>
         <member name="T:ProjektSemestralny.App">
