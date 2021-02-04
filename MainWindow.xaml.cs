@@ -2,18 +2,18 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Data;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Data;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace ProjektSemestralny
 {
@@ -32,42 +32,42 @@ namespace ProjektSemestralny
         }
 
         /// <summary>
-        /// Method performing login to the database
+        /// The <c>connectButton_Click</c> method.
+        /// Performing login to the database on 'Connect' button click.
+        /// Uses DatabaseService.openConnection method and takes Login and Password parameters.
+        /// Uses <c>OpenSelectTableWindow</c> method to open the SelectTableWindow window.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void connectButton_Click(object sender, RoutedEventArgs e)
         {
-            downloadData();
+            DatabaseService.OpenConnection(logintb.Text, passwordtb.Password);
+            OpenSelectTableWindow();
         }
 
         /// <summary>
-        /// Method connecting to the database
+        /// The <c>cancelButton_Click</c> method.
+        /// Closing application on 'Cancel' button click.
         /// </summary>
-        public void downloadData()
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void cancelButton_Click(object sender, RoutedEventArgs e)
         {
-            string myConnection =
-                "SERVER=" + serverNametb.Text + ";" +
-                "DATABASE=" + databaseNametb.Text + ";" +
-                "UID=" + logintb.Text + ";" +
-                "PASSWORD=" + passwordtb.Password + ";";
-
-            SqlConnection connection = new SqlConnection(myConnection);
-
-                try
-                {
-                    connection.Open();
-                    var Nextwindow = new Window1();
-                    Nextwindow.ShowDialog();
-                }
-
-            ///<exception cref="SqlException">Thrown when fail logging.</exception>
-            catch (SqlException ex)
-                {
-                    MessageBox.Show("Błąd logowania do bazy danych", "Błąd");
-                }
-                connection.Close();
+            Close();
         }
-     }
+        /// <summary>
+        /// The <c>OpenSelectTableWindow</c> method.
+        /// Opens next window.
+        /// </summary>
+        public void OpenSelectTableWindow()
+        {
+            var currentWindow = Application.Current.Windows [0];
+            currentWindow.Hide();
+
+            SelectTableWindow nextWindow = new SelectTableWindow();
+            nextWindow.ShowDialog();
+            currentWindow.Show();
+        }
+    }
 }
 

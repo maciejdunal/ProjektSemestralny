@@ -5,19 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjektSemestralny"
         mc:Ignorable="d"
-        Title="Connect to database" HorizontalAlignment="Center" VerticalAlignment="Top" Height="284" Width="400">
+        Title="Connect to database..." HorizontalAlignment="Center" VerticalAlignment="Top" Height="200" Width="400">
     <Grid Margin="0,0,0,-8">
+        <Grid.Background>
+            <ImageBrush ImageSource="login_window.png"/>
+        </Grid.Background>
 
-        <TextBox x:Name="serverNametb" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="260" Margin="122,42,0,0"/>
-        <TextBox x:Name="databaseNametb" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="260" Margin="122,77,0,0"/>
-        <TextBox x:Name="logintb" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="260" Margin="122,112,0,0"/>
-        <PasswordBox x:Name="passwordtb" HorizontalAlignment="Left" VerticalAlignment="Top" Height="30" Width="260" Margin="122,147,0,0"/>
+        <TextBox x:Name="logintb" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="224" Margin="158,22,0,0"/>
+        <PasswordBox x:Name="passwordtb" HorizontalAlignment="Left" VerticalAlignment="Top" Height="30" Width="224" Margin="158,64,0,0"/>
 
-        <Label Content="Server name:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="12,42,0,0" Width="105" Height="30"/>
-        <Label Content="Password:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,147,0,0" Width="95" Height="30"/>
-        <Label Content="Login:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,112,0,0" Width="95" Height="30"/>
-        <Label Content="Database name:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="12,77,0,0" Width="105" Height="30"/>
-        <Button x:Name="connectButton" Content="Connect" HorizontalAlignment="Left" VerticalAlignment="Top" Width="260" Margin="122,194,0,0" Height="41" Click="connectButton_Click"/>
+        <Label Content="Password:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="70,64,0,0" Width="88" Height="30" FontSize="16" FontFamily="Arial"/>
+        <Label Content="Username:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="70,22,0,0" Width="88" Height="30" RenderTransformOrigin="0.554,-0.889" FontSize="16" FontFamily="Arial"/>
+        <Button x:Name="connectButton" Content="Connect" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Margin="158,117,0,0" Height="30" Click="connectButton_Click" FontFamily="Arial" Background="#FFDDDDDD" BorderBrush="#FF1A36E8"/>
+        <Button x:Name="cancelButton" Content="Cancel" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Margin="274,117,0,0" Height="30" Click="cancelButton_Click" FontFamily="Arial" BorderBrush="#FF1A36E8" RenderTransformOrigin="0.5,0.5">
+        </Button>
 
 
     </Grid>

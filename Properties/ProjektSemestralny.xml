@@ -4,6 +4,24 @@
         <name>ProjektSemestralny</name>
     </assembly>
     <members>
+        <member name="M:ProjektSemestralny.DatabaseService.OpenConnection(System.String,System.String)">
+            <summary>
+            The <c>OpenConnection</c> Method .
+            Connects to the database
+            Takes username parameter and password parameter to use it in connection to database
+            </summary>
+            <param name="username"></param>
+            <param name="password"></param>
+        </member>
+        <member name="M:ProjektSemestralny.DatabaseService.AddCredentials(System.String,System.String)">
+            <summary>
+            The <c>AddCredentials</c> method.
+            Takes and saves username parameter and password parameter to ConnectionString
+            </summary>
+            <param name="username"></param>
+            <param name="password"></param>
+            <returns></returns>
+        </member>
         <member name="T:ProjektSemestralny.Gry">
             <summary>
             Class <c>Gry</c> contains values of 'Gry' table
@@ -173,17 +191,173 @@
             </list>
             </summary>
         </member>
-        <member name="T:ProjektSemestralny.Window1">
+        <member name="T:ProjektSemestralny.SelectTableWindow">
             <summary>
             Interaction logic for Window1.xaml
             </summary>
             <summary>
-            Window1
+            SelectTableWindow
             </summary>
         </member>
-        <member name="M:ProjektSemestralny.Window1.InitializeComponent">
+        <member name="M:ProjektSemestralny.SelectTableWindow.#ctor">
+            <summary>
+             <c>SelectTableWindow</c> initialization, calls the <c>RenderTables</c> method.
+             </summary>
+        </member>
+        <member name="M:ProjektSemestralny.SelectTableWindow.RenderTables">
+            <summary>
+            The <c>RenderTables</c> method
+            Writes the query result to the dropdown
+            </summary>
+        </member>
+        <member name="M:ProjektSemestralny.SelectTableWindow.InitializeComponent">
             <summary>
             InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ProjektSemestralny.Wypozyczalnia_Gier_komputerowychDataSet">
+             <summary>
+            Represents a strongly typed in-memory cache of data.
+            </summary>
+        </member>
+        <member name="T:ProjektSemestralny.Wypozyczalnia_Gier_komputerowychDataSet.GryDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:ProjektSemestralny.Wypozyczalnia_Gier_komputerowychDataSet.KlienciDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:ProjektSemestralny.Wypozyczalnia_Gier_komputerowychDataSet.PracownicyDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:ProjektSemestralny.Wypozyczalnia_Gier_komputerowychDataSet.WypozyczeniaDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:ProjektSemestralny.Wypozyczalnia_Gier_komputerowychDataSet.ZwrotyDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:ProjektSemestralny.Wypozyczalnia_Gier_komputerowychDataSet.GryRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:ProjektSemestralny.Wypozyczalnia_Gier_komputerowychDataSet.KlienciRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:ProjektSemestralny.Wypozyczalnia_Gier_komputerowychDataSet.PracownicyRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:ProjektSemestralny.Wypozyczalnia_Gier_komputerowychDataSet.WypozyczeniaRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:ProjektSemestralny.Wypozyczalnia_Gier_komputerowychDataSet.ZwrotyRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:ProjektSemestralny.Wypozyczalnia_Gier_komputerowychDataSet.GryRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:ProjektSemestralny.Wypozyczalnia_Gier_komputerowychDataSet.KlienciRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:ProjektSemestralny.Wypozyczalnia_Gier_komputerowychDataSet.PracownicyRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:ProjektSemestralny.Wypozyczalnia_Gier_komputerowychDataSet.WypozyczeniaRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:ProjektSemestralny.Wypozyczalnia_Gier_komputerowychDataSet.ZwrotyRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:ProjektSemestralny.Wypozyczalnia_Gier_komputerowychDataSetTableAdapters.GryTableAdapter">
+             <summary>
+            Represents the connection and commands used to retrieve and save data.
+            </summary>
+        </member>
+        <member name="T:ProjektSemestralny.Wypozyczalnia_Gier_komputerowychDataSetTableAdapters.KlienciTableAdapter">
+             <summary>
+            Represents the connection and commands used to retrieve and save data.
+            </summary>
+        </member>
+        <member name="T:ProjektSemestralny.Wypozyczalnia_Gier_komputerowychDataSetTableAdapters.PracownicyTableAdapter">
+             <summary>
+            Represents the connection and commands used to retrieve and save data.
+            </summary>
+        </member>
+        <member name="T:ProjektSemestralny.Wypozyczalnia_Gier_komputerowychDataSetTableAdapters.WypozyczeniaTableAdapter">
+             <summary>
+            Represents the connection and commands used to retrieve and save data.
+            </summary>
+        </member>
+        <member name="T:ProjektSemestralny.Wypozyczalnia_Gier_komputerowychDataSetTableAdapters.ZwrotyTableAdapter">
+             <summary>
+            Represents the connection and commands used to retrieve and save data.
+            </summary>
+        </member>
+        <member name="T:ProjektSemestralny.Wypozyczalnia_Gier_komputerowychDataSetTableAdapters.TableAdapterManager">
+             <summary>
+            TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+            </summary>
+        </member>
+        <member name="M:ProjektSemestralny.Wypozyczalnia_Gier_komputerowychDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(ProjektSemestralny.Wypozyczalnia_Gier_komputerowychDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+             <summary>
+            Update rows in top-down order.
+            </summary>
+        </member>
+        <member name="M:ProjektSemestralny.Wypozyczalnia_Gier_komputerowychDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(ProjektSemestralny.Wypozyczalnia_Gier_komputerowychDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+             <summary>
+            Insert rows in top-down order.
+            </summary>
+        </member>
+        <member name="M:ProjektSemestralny.Wypozyczalnia_Gier_komputerowychDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(ProjektSemestralny.Wypozyczalnia_Gier_komputerowychDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+             <summary>
+            Delete rows in bottom-up order.
+            </summary>
+        </member>
+        <member name="M:ProjektSemestralny.Wypozyczalnia_Gier_komputerowychDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+             <summary>
+            Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+            </summary>
+        </member>
+        <member name="M:ProjektSemestralny.Wypozyczalnia_Gier_komputerowychDataSetTableAdapters.TableAdapterManager.UpdateAll(ProjektSemestralny.Wypozyczalnia_Gier_komputerowychDataSet)">
+             <summary>
+            Update all changes to the dataset.
+            </summary>
+        </member>
+        <member name="T:ProjektSemestralny.Wypozyczalnia_Gier_komputerowychDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+             <summary>
+            Update Order Option
+            </summary>
+        </member>
+        <member name="T:ProjektSemestralny.Wypozyczalnia_Gier_komputerowychDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+             <summary>
+            Used to sort self-referenced table's rows
             </summary>
         </member>
         <member name="T:ProjektSemestralny.Wypozyczenia">
@@ -286,14 +460,26 @@
         </member>
         <member name="M:ProjektSemestralny.MainWindow.connectButton_Click(System.Object,System.Windows.RoutedEventArgs)">
             <summary>
-            Method performing login to the database
+            The <c>connectButton_Click</c> method.
+            Performing login to the database on 'Connect' button click.
+            Uses DatabaseService.openConnection method and takes Login and Password parameters.
+            Uses <c>OpenSelectTableWindow</c> method to open the SelectTableWindow window.
             </summary>
             <param name="sender"></param>
             <param name="e"></param>
         </member>
-        <member name="M:ProjektSemestralny.MainWindow.downloadData">
+        <member name="M:ProjektSemestralny.MainWindow.cancelButton_Click(System.Object,System.Windows.RoutedEventArgs)">
             <summary>
-            Method connecting to the database
+            The <c>cancelButton_Click</c> method.
+            Closing application on 'Cancel' button click.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:ProjektSemestralny.MainWindow.OpenSelectTableWindow">
+            <summary>
+            The <c>OpenSelectTableWindow</c> method.
+            Opens next window.
             </summary>
         </member>
         <member name="M:ProjektSemestralny.MainWindow.InitializeComponent">
