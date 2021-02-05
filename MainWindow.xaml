@@ -11,11 +11,11 @@
             <ImageBrush ImageSource="login_window.png"/>
         </Grid.Background>
 
-        <TextBox x:Name="logintb" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="224" Margin="158,22,0,0"/>
-        <PasswordBox x:Name="passwordtb" HorizontalAlignment="Left" VerticalAlignment="Top" Height="30" Width="224" Margin="158,64,0,0"/>
+        <TextBox x:Name="logintb" HorizontalAlignment="Left" Height="21" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" Margin="150,26,0,0"/>
+        <PasswordBox x:Name="passwordtb" HorizontalAlignment="Left" VerticalAlignment="Top" Height="21" Width="165" Margin="150,67,0,0"/>
 
-        <Label Content="Password:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="70,64,0,0" Width="88" Height="30" FontSize="16" FontFamily="Arial"/>
-        <Label Content="Username:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="70,22,0,0" Width="88" Height="30" RenderTransformOrigin="0.554,-0.889" FontSize="16" FontFamily="Arial"/>
+        <Label Content="Password:" HorizontalAlignment="Left" Foreground="White" VerticalAlignment="Top" Margin="70,64,0,0" Width="80" Height="28" FontSize="14" FontFamily="Arial"/>
+        <Label Content="Username:" HorizontalAlignment="Left" Foreground="White" VerticalAlignment="Top" Margin="70,22,0,0" Width="80" Height="30" RenderTransformOrigin="0.554,-0.889" FontSize="14" FontFamily="Arial"/>
         <Button x:Name="connectButton" Content="Connect" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Margin="158,117,0,0" Height="30" Click="connectButton_Click" FontFamily="Arial" Background="#FFDDDDDD" BorderBrush="#FF1A36E8"/>
         <Button x:Name="cancelButton" Content="Cancel" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Margin="274,117,0,0" Height="30" Click="cancelButton_Click" FontFamily="Arial" BorderBrush="#FF1A36E8" RenderTransformOrigin="0.5,0.5">
         </Button>

@@ -43,8 +43,29 @@ namespace ProjektSemestralny
             {
                 tableList.Items.Add(table);
             }
-
+            
             tableList.SelectedIndex = 0;
+        }
+
+        private void selectTableButton_Click(object sender, RoutedEventArgs e)
+        {
+            string selectedItem = tableList.SelectedItem.ToString();
+            if (selectedItem == "Klienci")
+            {
+                var currentWindow = Application.Current.Windows[1];
+                currentWindow.Hide();
+
+                Table1Window nextWindow = new Table1Window();
+                nextWindow.ShowDialog();
+                currentWindow.Show();
+            }
+            else
+                MessageBox.Show("The view is not implemented yet");
+        }
+
+        private void cancelTableButton_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
         }
     }
 }

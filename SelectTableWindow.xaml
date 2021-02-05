@@ -5,13 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjektSemestralny"
         mc:Ignorable="d"
-        Title="Window1" Height="450" Width="800">
+        Title="Select table" Height="200" Width="430">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <ComboBox x:Name="tableList" HorizontalAlignment="Left" VerticalAlignment="Top" Width="332" Margin="338,137,0,0" Grid.Row="2" Height="115"/>
+        <ComboBox x:Name="tableList" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Margin="115,33,0,0" Grid.Row="2" Height="25" SelectedItem="Binding Selectedtable">
+        </ComboBox>
+        <Label Content="Open" HorizontalAlignment="Left" Margin="59,29,0,101.8" Grid.Row="2" Width="51" RenderTransformOrigin="0.545,-0.445" FontSize="14"/>
+        <Button x:Name="selectTableButton" Content="OK" HorizontalAlignment="Left" Margin="115,97,0,0" Grid.Row="2" VerticalAlignment="Top" Width="90" Height="40" Click="selectTableButton_Click"/>
+        
+        <Label Content="table" HorizontalAlignment="Left" Margin="320,29,0,101.8" Grid.Row="2" Width="51" RenderTransformOrigin="0.545,-0.445" FontSize="14"/>
+        <Button x:Name="cancelTableButton" Content="Cancel" HorizontalAlignment="Left" Margin="225,97,0,0" Grid.Row="2" VerticalAlignment="Top" Width="90" Height="40" Click="cancelTableButton_Click"/>
+
     </Grid>
 </Window>

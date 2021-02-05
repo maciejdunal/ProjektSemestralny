@@ -53,7 +53,10 @@ namespace ProjektSemestralny
         {
             return CONN_STRING + "User ID=" + username + ";Password=" + password;
         }
-
+        /// <summary>
+        /// Reads database table list
+        /// </summary>
+        /// <returns>Table List</returns>
         public static List<String> ReadTables()
         {
             List<String> result = new List<String>(); 
@@ -71,6 +74,5 @@ namespace ProjektSemestralny
 
             return result;
         }
-
     }
 }

@@ -2949,7 +2949,7 @@ SELECT ID_gry, Nazwa, Kategoria, Kategoria_wiekowa, Data_wydania, Cena_dzien FRO
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::ProjektSemestralny.Properties.Settings.Default.Connection_String;
+            this._connection.ConnectionString = global::ProjektSemestralny.Properties.Settings.Default.Wypozyczalnia_Gier_komputerowychConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3369,7 +3369,7 @@ SELECT ID_klienta, Nazwisko, Imie, Adres, Kod_pocztowy, Data_urodzenia, Numer_DO
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::ProjektSemestralny.Properties.Settings.Default.Connection_String;
+            this._connection.ConnectionString = global::ProjektSemestralny.Properties.Settings.Default.Wypozyczalnia_Gier_komputerowychConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3808,7 +3808,7 @@ SELECT ID_pracownika, Imie, Nazwisko, Data_urodzenia, Adres, Stanowisko FROM Pra
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::ProjektSemestralny.Properties.Settings.Default.Connection_String;
+            this._connection.ConnectionString = global::ProjektSemestralny.Properties.Settings.Default.Wypozyczalnia_Gier_komputerowychConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4218,7 +4218,7 @@ SELECT ID_wypozyczenia, ID_Gry, ID_pracownika, ID_klienta, Data_wypozyczenia FRO
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::ProjektSemestralny.Properties.Settings.Default.Connection_String;
+            this._connection.ConnectionString = global::ProjektSemestralny.Properties.Settings.Default.Wypozyczalnia_Gier_komputerowychConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4541,7 +4541,7 @@ SELECT ID_wypozyczenia, ID_pracownika, data_zwrotu, doplaty FROM Zwroty WHERE (I
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::ProjektSemestralny.Properties.Settings.Default.Connection_String;
+            this._connection.ConnectionString = global::ProjektSemestralny.Properties.Settings.Default.Wypozyczalnia_Gier_komputerowychConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
