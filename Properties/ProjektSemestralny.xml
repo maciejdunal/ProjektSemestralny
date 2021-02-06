@@ -22,6 +22,12 @@
             <param name="password"></param>
             <returns></returns>
         </member>
+        <member name="M:ProjektSemestralny.DatabaseService.ReadTables">
+            <summary>
+            Reads database table list
+            </summary>
+            <returns>Table List</returns>
+        </member>
         <member name="T:ProjektSemestralny.SelectTableWindow">
             <summary>
             Interaction logic for Window1.xaml

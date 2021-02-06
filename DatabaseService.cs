@@ -20,7 +20,7 @@ namespace ProjektSemestralny
     class DatabaseService
     {   
         private const String CONN_STRING = "Data Source=MACIEKDELL;Initial Catalog = Wypozyczalnia_Gier_komputerowych;";
-        private static SqlConnection con;
+        public static SqlConnection con;
 
         /// <summary>
         /// The <c>OpenConnection</c> Method .

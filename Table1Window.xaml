@@ -5,26 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjektSemestralny"
         mc:Ignorable="d"
-        Title="Klienci table" Height="800" Width="1030">
+        Title="Klienci table" Height="800" Width="1030" Loaded="Window_Loaded" Closed="Window_Closed">
     <Grid Margin="0,0,0,2">
         
         
-        <DataGrid x:Name="MyDataGrid" HorizontalAlignment="Left" Height="400" Margin="10,10,0,0" VerticalAlignment="Top" Width="1000" Loaded="Load_table"/>
+        <DataGrid x:Name="MyDataGrid" HorizontalAlignment="Left" Height="400" Margin="10,10,0,0" VerticalAlignment="Top" Width="1000" Loaded="Load_table" SelectionChanged="MyDataGrid_SelectionChanged"/>
         <GroupBox Header="Klienci" HorizontalAlignment="Left" Height="86" Margin="10,415,0,0" VerticalAlignment="Top" Width="1000"/>
-        <TextBox x:Name="ID_Klienta_tb" HorizontalAlignment="Left" Height="22" Margin="17,468,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="141.42857"/>
-        <TextBox x:Name="Nazwisko_tb" HorizontalAlignment="Left" Height="22" Margin="158,468,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="142"/>
-        <TextBox x:Name="Imie_tb" HorizontalAlignment="Left" Height="22" Margin="300,468,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="142"/>
-        <TextBox x:Name="Number_DO_tb" HorizontalAlignment="Left" Height="22" Margin="865,468,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="141"/>
-        <TextBox x:Name="Data_urodzenia_tb" HorizontalAlignment="Left" Height="22" Margin="724,468,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="141"/>
-        <TextBox x:Name="Kod_pocztowy_tb" HorizontalAlignment="Left" Height="22" Margin="583,468,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="141"/>
-        <TextBox x:Name="Adres_tb" HorizontalAlignment="Left" Height="22" Margin="442,468,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="141"/>
+        <TextBox x:Name="ID_Klienta_tb" HorizontalAlignment="Left" Height="25" Margin="17,468,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="141.42857"/>
+        <TextBox x:Name="Nazwisko_tb" HorizontalAlignment="Left" Height="25" Margin="158,468,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="142"/>
+        <TextBox x:Name="Imie_tb" HorizontalAlignment="Left" Height="25" Margin="300,468,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="142"/>
+        <TextBox x:Name="Adres_tb" HorizontalAlignment="Left" Height="25" Margin="442,468,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="141"/>
+        <TextBox x:Name="Kod_pocztowy_tb" HorizontalAlignment="Left" Height="25" Margin="583,468,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="141"/>
+        <DatePicker x:Name="Data_urodzenia_datapicker" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="724,468,0,0" Height="25" Width="141"/>
+        <TextBox x:Name="Numer_DO_tb" HorizontalAlignment="Left" Height="25" Margin="865,468,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="141"/>
+
         <Label Content="ID_Klienta" HorizontalAlignment="Left" Margin="17,442,0,0" VerticalAlignment="Top" Width="141"/>
         <Label Content="Nazwisko" HorizontalAlignment="Left" Height="27" Margin="158,441,0,0" VerticalAlignment="Top" Width="142"/>
         <Label Content="Imie" HorizontalAlignment="Left" Height="26" Margin="300,442,0,0" VerticalAlignment="Top" Width="142"/>
         <Label Content="Adres" HorizontalAlignment="Left" Height="26" Margin="442,442,0,0" VerticalAlignment="Top" Width="141"/>
-        <Label Content="Kod pocztowy" HorizontalAlignment="Left" Height="26" Margin="724,442,0,0" VerticalAlignment="Top" Width="141"/>
-        <Label Content="Data urodzenia" HorizontalAlignment="Left" Height="26" Margin="583,442,0,0" VerticalAlignment="Top" Width="141"/>
+        <Label Content="Data urodzenia" HorizontalAlignment="Left" Height="26" Margin="724,442,0,0" VerticalAlignment="Top" Width="141"/>
+        <Label Content="Kod pocztowy" HorizontalAlignment="Left" Height="26" Margin="583,442,0,0" VerticalAlignment="Top" Width="141"/>
         <Label Content="Number DO" HorizontalAlignment="Left" Height="26" Margin="865,441,0,0" VerticalAlignment="Top" Width="141"/>
+        
         <Button x:Name="add_btn" Content="Add" HorizontalAlignment="Left" Margin="120,564,0,0" VerticalAlignment="Top" Height="50" Width="180" Click="add_btn_Click"/>
         <Button x:Name="update_btn" Content="Update" HorizontalAlignment="Left" Margin="442,564,0,0" VerticalAlignment="Top" Height="50" Width="180" IsEnabled="False" Click="update_btn_Click"/>
         <Button x:Name="delete_btn" Content="Delete" HorizontalAlignment="Left" Margin="760,564,0,0" VerticalAlignment="Top" Height="50" Width="180" IsEnabled="False" Click="delete_btn_Click"/>
