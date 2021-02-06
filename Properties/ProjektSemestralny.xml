@@ -44,7 +44,7 @@
         <member name="M:ProjektSemestralny.SelectTableWindow.RenderTables">
             <summary>
             The <c>RenderTables</c> method
-            Writes the query result to the dropdown
+            Writes the Query result to the dropdown
             </summary>
         </member>
         <member name="M:ProjektSemestralny.SelectTableWindow.InitializeComponent">

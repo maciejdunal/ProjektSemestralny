@@ -34,7 +34,7 @@ namespace ProjektSemestralny
 
         /// <summary>
         /// The <c>RenderTables</c> method
-        /// Writes the query result to the dropdown
+        /// Writes the Query result to the dropdown
         /// </summary>
         public void RenderTables()
         {

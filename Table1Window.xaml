@@ -31,6 +31,7 @@
         <Button x:Name="update_btn" Content="Update" HorizontalAlignment="Left" Margin="442,564,0,0" VerticalAlignment="Top" Height="50" Width="180" IsEnabled="False" Click="update_btn_Click"/>
         <Button x:Name="delete_btn" Content="Delete" HorizontalAlignment="Left" Margin="760,564,0,0" VerticalAlignment="Top" Height="50" Width="180" IsEnabled="False" Click="delete_btn_Click"/>
         <Button x:Name="reset_btn" Content="Reset" HorizontalAlignment="Left" Margin="442,660,0,0" VerticalAlignment="Top" Height="50" Width="180" Click="reset_btn_Click"/>
+        <Button x:Name="back_btn" Content="Back" HorizontalAlignment="Left" Margin="760,660,0,0" VerticalAlignment="Top" Height="50" Width="180" Click="back_btn_Click"/>
 
 
 

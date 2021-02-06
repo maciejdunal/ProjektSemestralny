@@ -170,7 +170,7 @@
           <Key>
             <PropertyRef Name="ID_klienta" />
           </Key>
-          <Property Name="ID_klienta" Type="Int32" Nullable="false" />
+          <Property Name="ID_klienta" Type="Int32" Nullable="false" ConcurrencyMode="None" />
           <Property Name="Nazwisko" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="Imie" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="Adres" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />

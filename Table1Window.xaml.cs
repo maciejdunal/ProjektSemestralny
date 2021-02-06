@@ -22,33 +22,33 @@ namespace ProjektSemestralny
     /// </summary>
     public partial class Table1Window : Window
     {
-        Wypozyczalnia_Gier_komputerowychEntities1 dataEntities = new Wypozyczalnia_Gier_komputerowychEntities1();
+        
         public Table1Window()
         {
             InitializeComponent();
         }
 
-        private void Load_table(object sender, RoutedEventArgs e)
-        {
-            Query();
-        }
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            this.Query();
+            this.UpdateDataGrid();
         }
         private void Window_Closed(object sender, EventArgs e)
         {
 
         }
 
-        public void Query()
+        public void UpdateDataGrid()
         {
-            //var query =
-            //    from klienci in dataEntities.Kliencis
-            //    select new { klienci.ID_klienta, klienci.Nazwisko, klienci.Imie, klienci.Adres, klienci.Kod_pocztowy, klienci.Data_urodzenia, klienci.Numer_DO };
-            //MyDataGrid.ItemsSource = query.ToList();
             SqlCommand cmd = DatabaseService.con.CreateCommand();
-            cmd.CommandText = "SELECT ID_klienta, Nazwisko, Imie, Adres, Kod_pocztowy, Data_urodzenia, Numer_DO FROM Klienci";
+            cmd.CommandText = 
+                "SELECT ID_klienta," +
+                    " Nazwisko, " +
+                    "Imie, " +
+                    "Adres, " +
+                    "Kod_pocztowy, " +
+                    "Data_urodzenia, " +
+                    "Numer_DO FROM Klienci";
+
             cmd.CommandType = CommandType.Text;
             SqlDataReader dr = cmd.ExecuteReader();
             DataTable dt = new DataTable();
@@ -59,35 +59,20 @@ namespace ProjektSemestralny
 
         private void add_btn_Click(object sender, RoutedEventArgs e)
         {
-            String sql =
-                "INSERT INTO Klienci(ID_klienta, Nazwisko, Imie, Adres, Kod_Pocztowy, Data_urodzenia, Numer_DO) " +
-                "VALUES(:ID_klienta :Nazwisko, Imie, :Adres, :Kod_Pocztowy, :Data_urodzenia, :Numer_DO)";
-            this.AUD(sql, 0);
+            this.Operations("", 0);
             add_btn.IsEnabled = false;
             update_btn.IsEnabled = true;
             delete_btn.IsEnabled = true;
-
         }
 
         private void update_btn_Click(object sender, RoutedEventArgs e)
         {
-            String sql =
-                "UPDATE Klienci SET Nazwisko = :Nazwisko" +
-                    "Imie = :Imie," +
-                    "Adres = :Adres," +
-                    "Kod_pocztowy= :Kod_pocztowy" +
-                    "Data_urodzenia= :Kod_pocztowy," +
-                    "Numer_DO = :Numer_DO" +
-                "WHERE ID_klienta = :ID_klienta";
-            this.AUD(sql, 1);
+            this.Operations("", 1);
         }
 
         private void delete_btn_Click(object sender, RoutedEventArgs e)
         {
-            String sql =
-                "DELETE FROM Klienci " +
-                "WHERE ID_Klienta = :ID_Klienta";
-            this.AUD(sql, 2);
+            this.Operations("", 2);
             this.resetAll();
         }
         private void resetAll()
@@ -110,57 +95,84 @@ namespace ProjektSemestralny
             this.resetAll();
         }
 
-        private void AUD(String statement, int state)
+        private void back_btn_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
+        /// <summary>
+        /// The <c>Operations</c> method.
+        /// It allows  to Add, Update and Delete operations
+        /// </summary>
+        /// <param name="statement"></param>
+        /// <param name="state"></param>
+        private void Operations(String statement, int state)
         {
             String msg = "";
             SqlCommand cmd = DatabaseService.con.CreateCommand();
             cmd.CommandText = statement;
             cmd.CommandType = CommandType.Text;
-
+            
+            var date = $@"{Data_urodzenia_datapicker.SelectedDate.Value.Month}/{Data_urodzenia_datapicker.SelectedDate.Value.Day}/{Data_urodzenia_datapicker.SelectedDate.Value.Year}";
 
             switch (state)
             {
                 case 0:
                     msg = "Row Inserted Successfully!";
-                    cmd.Parameters.Add("ID_klienta", SqlDbType.Int, 6).Value = Int32.Parse(ID_Klienta_tb.Text);
-                    cmd.Parameters.Add("Nazwisko", SqlDbType.VarChar, 50).Value = Nazwisko_tb.Text;
-                    cmd.Parameters.Add("Imie", SqlDbType.VarChar, 50).Value = Imie_tb.Text;
-                    cmd.Parameters.Add("Adres", SqlDbType.VarChar, 50).Value = Adres_tb.Text;
-                    cmd.Parameters.Add("Kod_pocztowy", SqlDbType.VarChar, 50).Value = Kod_pocztowy_tb.Text;
-                    cmd.Parameters.Add("Data_urodzenia", SqlDbType.Date, 7).Value = Data_urodzenia_datapicker.SelectedDate;
-                    cmd.Parameters.Add("Numer_DO", SqlDbType.VarChar, 50).Value = Numer_DO_tb.Text;
+
+                    cmd.CommandText =
+                         "INSERT INTO Klienci (" +
+                             "ID_klienta, + " +
+                             "Nazwisko, " +
+                             "Imie, " +
+                             "Adres, " +
+                             "Kod_Pocztowy, " +
+                             "Data_urodzenia, " +
+                             "Numer_DO) " +
+                         
+                         "VALUES(" +
+                             $@"{Int32.Parse(ID_Klienta_tb.Text)}, " +
+                             $@"'{Nazwisko_tb.Text}', " +
+                             $@"'{Imie_tb.Text}', " +
+                             $@"'{Adres_tb.Text}', " +
+                             $@"'{Kod_pocztowy_tb.Text}', " +
+                             $@"'{date}', " +
+                             $@"'{Numer_DO_tb.Text}')";
 
                     break;
                 case 1:
                     msg = "Row Updated Successfully!";
 
-                    cmd.Parameters.Add("Nazwisko", SqlDbType.VarChar, 50).Value = Nazwisko_tb.Text;
-                    cmd.Parameters.Add("Imie", SqlDbType.VarChar, 50).Value = Imie_tb.Text;
-                    cmd.Parameters.Add("Adres", SqlDbType.VarChar, 50).Value = Adres_tb.Text;
-                    cmd.Parameters.Add("Kod_pocztowy", SqlDbType.VarChar, 50).Value = Kod_pocztowy_tb.Text;
-                    cmd.Parameters.Add("Data_urodzenia", SqlDbType.Date, 7).Value = Data_urodzenia_datapicker.SelectedDate;
-                    cmd.Parameters.Add("Numer_DO", SqlDbType.VarChar, 50).Value = Numer_DO_tb.Text;
-
-                    cmd.Parameters.Add("ID_klienta", SqlDbType.Int, 6).Value = Guid.Parse(ID_Klienta_tb.Text);
+                    cmd.CommandText =
+                        $@"UPDATE Klienci Set " +
+                            $@"Nazwisko = '{Nazwisko_tb.Text}', " +
+                            $@"Imie = '{Imie_tb.Text}', " +
+                            $@"Adres = '{Adres_tb.Text}', " +
+                            $@"Kod_Pocztowy = '{Kod_pocztowy_tb.Text}', " +
+                            $@"Data_urodzenia = '{date}', " +
+                            $@"Numer_DO = '{Numer_DO_tb.Text}' " +
+                        $@"WHERE ID_klienta = {Int32.Parse(ID_Klienta_tb.Text)};";
 
                     break;
                 case 2:
-                    msg = "Row Deleted Successfully!";
+                     msg = "Row Deleted Successfully!";
 
-                    //cmd.Parameters.Add("ID_klienta", SqlDbType.Int, 6).Value = Guid.Parse(ID_Klienta_tb.Text);
-                    cmd.Parameters.Add("Imie", SqlDbType.VarChar, 50).Value = Imie_tb.Text;
+                    cmd.CommandText =
+                        "DELETE FROM Klienci " +
+                        "WHERE ID_klienta = " +
+                            $@"{Int32.Parse(ID_Klienta_tb.Text)}";
                     break;
             }
             try
             {
-                int n = cmd.ExecuteNonQuery();
-                if (n > 0)
+                int x = cmd.ExecuteNonQuery();
+                if (x > 0)
                 {
                     MessageBox.Show(msg);
-                    this.Query();
+                    this.UpdateDataGrid();
                 }
             }
-            catch (Exception exp) { }
+            catch(Exception ex) { }
         }
         private void MyDataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -168,13 +180,15 @@ namespace ProjektSemestralny
             DataRowView dr = dg.SelectedItem as DataRowView;
             if (dr != null)
             {
-                ID_Klienta_tb.Text = dr["ID_klienta"].ToString();
-                Nazwisko_tb.Text = dr["Nazwisko"].ToString();
-                Imie_tb.Text = dr["Imie"].ToString();
-                Adres_tb.Text = dr["Adres"].ToString();
-                Kod_pocztowy_tb.Text = dr["Kod_pocztowy"].ToString();
-                Data_urodzenia_datapicker.SelectedDate = DateTime.Parse(dr["Data_urodzenia"].ToString());
-                Numer_DO_tb.Text = dr["Numer_DO"].ToString();
+                _ = DateTime.TryParse(dr["Data_urodzenia"].ToString(), out var dateTime);
+
+                    ID_Klienta_tb.Text = dr["ID_klienta"].ToString();
+                    Nazwisko_tb.Text = dr["Nazwisko"].ToString();
+                    Imie_tb.Text = dr["Imie"].ToString();
+                    Adres_tb.Text = dr["Adres"].ToString();
+                    Kod_pocztowy_tb.Text = dr["Kod_pocztowy"].ToString();
+                    Data_urodzenia_datapicker.SelectedDate = dateTime;
+                    Numer_DO_tb.Text = dr["Numer_DO"].ToString();
 
                 add_btn.IsEnabled = false;
                 update_btn.IsEnabled = true;
