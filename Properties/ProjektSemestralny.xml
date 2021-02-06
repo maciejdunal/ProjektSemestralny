@@ -47,6 +47,14 @@
             Writes the Query result to the dropdown
             </summary>
         </member>
+        <member name="M:ProjektSemestralny.SelectTableWindow.selectTableButton_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            The <c>selectTableButton_Click</c> method.
+            Opens table managment for selected table
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
         <member name="M:ProjektSemestralny.SelectTableWindow.InitializeComponent">
             <summary>
             InitializeComponent
@@ -60,7 +68,28 @@
             Table1Window
             </summary>
         </member>
+        <member name="M:ProjektSemestralny.Table1Window.Operations(System.String,System.Int32)">
+            <summary>
+            The <c>Operations</c> method.
+            It allows  to Add, Update and Delete operations
+            </summary>
+            <param name="statement"></param>
+            <param name="state"></param>
+        </member>
         <member name="M:ProjektSemestralny.Table1Window.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ProjektSemestralny.Table2Window">
+            <summary>
+            Interaction logic for Table2Window.xaml
+            </summary>
+            <summary>
+            Table2Window
+            </summary>
+        </member>
+        <member name="M:ProjektSemestralny.Table2Window.InitializeComponent">
             <summary>
             InitializeComponent
             </summary>

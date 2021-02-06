@@ -46,7 +46,12 @@ namespace ProjektSemestralny
             
             tableList.SelectedIndex = 0;
         }
-
+        /// <summary>
+        /// The <c>selectTableButton_Click</c> method.
+        /// Opens table managment for selected table
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void selectTableButton_Click(object sender, RoutedEventArgs e)
         {
             string selectedItem = tableList.SelectedItem.ToString();

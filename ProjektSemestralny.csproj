@@ -92,6 +92,9 @@
     <Compile Include="Table1Window.xaml.cs">
       <DependentUpon>Table1Window.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Table2Window.xaml.cs">
+      <DependentUpon>Table2Window.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WypozyczalniaGierkomputerowychModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -138,6 +141,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Table1Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Table2Window.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
