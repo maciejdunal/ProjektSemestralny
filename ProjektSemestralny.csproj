@@ -86,14 +86,20 @@
     <Compile Include="Pracownicy.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="SelectTableWindow.xaml.cs">
+    <Compile Include="Windows\PracownicyWindow.xaml.cs">
+      <DependentUpon>PracownicyWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\SelectTableWindow.xaml.cs">
       <DependentUpon>SelectTableWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Table1Window.xaml.cs">
-      <DependentUpon>Table1Window.xaml</DependentUpon>
+    <Compile Include="Windows\KlienciWindow.xaml.cs">
+      <DependentUpon>KlienciWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Table2Window.xaml.cs">
-      <DependentUpon>Table2Window.xaml</DependentUpon>
+    <Compile Include="Windows\GryWindow.xaml.cs">
+      <DependentUpon>GryWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\WypozyczeniaWindow.xaml.cs">
+      <DependentUpon>WypozyczeniaWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="WypozyczalniaGierkomputerowychModel.Context.cs">
       <AutoGen>True</AutoGen>
@@ -136,15 +142,23 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="SelectTableWindow.xaml">
+    <Page Include="Windows\PracownicyWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Table1Window.xaml">
+    <Page Include="Windows\SelectTableWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Table2Window.xaml">
+    <Page Include="Windows\KlienciWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\GryWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\WypozyczeniaWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

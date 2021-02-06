@@ -28,6 +28,48 @@
             </summary>
             <returns>Table List</returns>
         </member>
+        <member name="T:ProjektSemestralny.Windows.PracownicyWindow">
+            <summary>
+            Interaction logic for PracownicyWindow.xaml
+            </summary>
+            <summary>
+            PracownicyWindow
+            </summary>
+        </member>
+        <member name="M:ProjektSemestralny.Windows.PracownicyWindow.Operations(System.String,System.Int32)">
+            <summary>
+            The <c>Operations</c> method.
+            It allows  to Add, Update and Delete operations
+            </summary>
+            <param name="statement"></param>
+            <param name="state"></param>
+        </member>
+        <member name="M:ProjektSemestralny.Windows.PracownicyWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ProjektSemestralny.Windows.WypozyczeniaWindow">
+            <summary>
+            Interaction logic for WypozyczeniaWindow.xaml
+            </summary>
+            <summary>
+            WypozyczeniaWindow
+            </summary>
+        </member>
+        <member name="M:ProjektSemestralny.Windows.WypozyczeniaWindow.Operations(System.String,System.Int32)">
+            <summary>
+            The <c>Operations</c> method.
+            It allows  to Add, Update and Delete operations
+            </summary>
+            <param name="statement"></param>
+            <param name="state"></param>
+        </member>
+        <member name="M:ProjektSemestralny.Windows.WypozyczeniaWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
         <member name="T:ProjektSemestralny.SelectTableWindow">
             <summary>
             Interaction logic for Window1.xaml
@@ -60,15 +102,15 @@
             InitializeComponent
             </summary>
         </member>
-        <member name="T:ProjektSemestralny.Table1Window">
+        <member name="T:ProjektSemestralny.KlienciWindow">
             <summary>
-            Interaction logic for Table1Window.xaml
+            Interaction logic for KlienciWindow.xaml
             </summary>
             <summary>
-            Table1Window
+            KlienciWindow
             </summary>
         </member>
-        <member name="M:ProjektSemestralny.Table1Window.Operations(System.String,System.Int32)">
+        <member name="M:ProjektSemestralny.KlienciWindow.Operations(System.String,System.Int32)">
             <summary>
             The <c>Operations</c> method.
             It allows  to Add, Update and Delete operations
@@ -76,20 +118,28 @@
             <param name="statement"></param>
             <param name="state"></param>
         </member>
-        <member name="M:ProjektSemestralny.Table1Window.InitializeComponent">
+        <member name="M:ProjektSemestralny.KlienciWindow.InitializeComponent">
             <summary>
             InitializeComponent
             </summary>
         </member>
-        <member name="T:ProjektSemestralny.Table2Window">
+        <member name="T:ProjektSemestralny.GryWindow">
             <summary>
-            Interaction logic for Table2Window.xaml
+            Interaction logic for GryWindow.xaml
             </summary>
             <summary>
-            Table2Window
+            GryWindow
             </summary>
         </member>
-        <member name="M:ProjektSemestralny.Table2Window.InitializeComponent">
+        <member name="M:ProjektSemestralny.GryWindow.Operations(System.String,System.Int32)">
+            <summary>
+            The <c>Operations</c> method.
+            It allows  to Add, Update and Delete operations
+            </summary>
+            <param name="statement"></param>
+            <param name="state"></param>
+        </member>
+        <member name="M:ProjektSemestralny.GryWindow.InitializeComponent">
             <summary>
             InitializeComponent
             </summary>

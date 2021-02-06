@@ -15,15 +15,14 @@ using System.Windows.Shapes;
 using System.Data.SqlClient;
 using System.Configuration;
 
-namespace ProjektSemestralny
+namespace ProjektSemestralny.Windows
 {
     /// <summary>
-    /// Interaction logic for Table1Window.xaml
+    /// Interaction logic for PracownicyWindow.xaml
     /// </summary>
-    public partial class Table1Window : Window
+    public partial class PracownicyWindow : Window
     {
-        
-        public Table1Window()
+        public PracownicyWindow()
         {
             InitializeComponent();
         }
@@ -34,20 +33,21 @@ namespace ProjektSemestralny
         }
         private void Window_Closed(object sender, EventArgs e)
         {
-
+            Close();
         }
 
         public void UpdateDataGrid()
         {
             SqlCommand cmd = DatabaseService.con.CreateCommand();
-            cmd.CommandText = 
-                "SELECT ID_klienta," +
-                    " Nazwisko, " +
+            cmd.CommandText =
+                "SELECT " +
+                    "ID_pracownika, " +
+                    "Nazwisko, " +
                     "Imie, " +
-                    "Adres, " +
-                    "Kod_pocztowy, " +
                     "Data_urodzenia, " +
-                    "Numer_DO FROM Klienci";
+                    "Adres, " +
+                    "Stanowisko " +
+                "FROM Pracownicy";
 
             cmd.CommandType = CommandType.Text;
             SqlDataReader dr = cmd.ExecuteReader();
@@ -77,13 +77,12 @@ namespace ProjektSemestralny
         }
         private void resetAll()
         {
-            ID_Klienta_tb.Text = "";
-            Nazwisko_tb.Text = "";
+            ID_pracownika_tb.Text = "";
             Imie_tb.Text = "";
-            Adres_tb.Text = "";
-            Kod_pocztowy_tb.Text = "";
+            Nazwisko_tb.Text = "";
             Data_urodzenia_datapicker.SelectedDate = null;
-            Numer_DO_tb.Text = "";
+            Adres_tb.Text = "";
+            Stanowisko_tb.Text = "";
 
             add_btn.IsEnabled = true;
             update_btn.IsEnabled = false;
@@ -112,7 +111,7 @@ namespace ProjektSemestralny
             SqlCommand cmd = DatabaseService.con.CreateCommand();
             cmd.CommandText = statement;
             cmd.CommandType = CommandType.Text;
-            
+
             var date = $@"{Data_urodzenia_datapicker.SelectedDate.Value.Month}/{Data_urodzenia_datapicker.SelectedDate.Value.Day}/{Data_urodzenia_datapicker.SelectedDate.Value.Year}";
 
             switch (state)
@@ -121,46 +120,43 @@ namespace ProjektSemestralny
                     msg = "Row Inserted Successfully!";
 
                     cmd.CommandText =
-                         "INSERT INTO Klienci (" +
-                             "ID_klienta, + " +
-                             "Nazwisko, " +
+                         "INSERT INTO Pracownicy (" +
+                             "ID_pracownika, " +
                              "Imie, " +
-                             "Adres, " +
-                             "Kod_Pocztowy, " +
+                             "Nazwisko, " +
                              "Data_urodzenia, " +
-                             "Numer_DO) " +
-                         
+                             "Adres, " +
+                             "Stanowisko) " +
+
                          "VALUES(" +
-                             $@"{Int32.Parse(ID_Klienta_tb.Text)}, " +
-                             $@"'{Nazwisko_tb.Text}', " +
+                             $@"{Int32.Parse(ID_pracownika_tb.Text)}, " +
                              $@"'{Imie_tb.Text}', " +
-                             $@"'{Adres_tb.Text}', " +
-                             $@"'{Kod_pocztowy_tb.Text}', " +
+                             $@"'{Nazwisko_tb.Text}', " +
                              $@"'{date}', " +
-                             $@"'{Numer_DO_tb.Text}')";
+                             $@"'{Adres_tb.Text}', " +
+                             $@"'{Stanowisko_tb.Text}')";
 
                     break;
                 case 1:
                     msg = "Row Updated Successfully!";
 
                     cmd.CommandText =
-                        $@"UPDATE Klienci Set " +
-                            $@"Nazwisko = '{Nazwisko_tb.Text}', " +
+                        $@"UPDATE Pracownicy Set " +
                             $@"Imie = '{Imie_tb.Text}', " +
-                            $@"Adres = '{Adres_tb.Text}', " +
-                            $@"Kod_Pocztowy = '{Kod_pocztowy_tb.Text}', " +
+                            $@"Nazwisko = '{Nazwisko_tb.Text}', " +
                             $@"Data_urodzenia = '{date}', " +
-                            $@"Numer_DO = '{Numer_DO_tb.Text}' " +
-                        $@"WHERE ID_klienta = {Int32.Parse(ID_Klienta_tb.Text)};";
+                            $@"Adres = '{Adres_tb.Text}', " +
+                            $@"Stanowisko = '{Stanowisko_tb.Text}' " +
+                        $@"WHERE ID_pracownika = {Int32.Parse(ID_pracownika_tb.Text)};";
 
                     break;
                 case 2:
-                     msg = "Row Deleted Successfully!";
+                    msg = "Row Deleted Successfully!";
 
                     cmd.CommandText =
                         "DELETE FROM Klienci " +
                         "WHERE ID_klienta = " +
-                            $@"{Int32.Parse(ID_Klienta_tb.Text)}";
+                            $@"{Int32.Parse(ID_pracownika_tb.Text)}";
                     break;
             }
             try
@@ -172,7 +168,7 @@ namespace ProjektSemestralny
                     this.UpdateDataGrid();
                 }
             }
-            catch(Exception ex) { }
+            catch (Exception ex) { }
         }
         private void MyDataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -182,13 +178,12 @@ namespace ProjektSemestralny
             {
                 _ = DateTime.TryParse(dr["Data_urodzenia"].ToString(), out var dateTime);
 
-                    ID_Klienta_tb.Text = dr["ID_klienta"].ToString();
-                    Nazwisko_tb.Text = dr["Nazwisko"].ToString();
-                    Imie_tb.Text = dr["Imie"].ToString();
-                    Adres_tb.Text = dr["Adres"].ToString();
-                    Kod_pocztowy_tb.Text = dr["Kod_pocztowy"].ToString();
-                    Data_urodzenia_datapicker.SelectedDate = dateTime;
-                    Numer_DO_tb.Text = dr["Numer_DO"].ToString();
+                ID_pracownika_tb.Text = dr["ID_pracownika"].ToString();
+                Imie_tb.Text = dr["Imie"].ToString();
+                Nazwisko_tb.Text = dr["Nazwisko"].ToString();
+                Data_urodzenia_datapicker.SelectedDate = dateTime;
+                Adres_tb.Text = dr["Adres"].ToString();
+                Stanowisko_tb.Text = dr["Stanowisko"].ToString();
 
                 add_btn.IsEnabled = false;
                 update_btn.IsEnabled = true;
