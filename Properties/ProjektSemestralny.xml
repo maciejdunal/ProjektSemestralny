@@ -70,6 +70,27 @@
             InitializeComponent
             </summary>
         </member>
+        <member name="T:ProjektSemestralny.Windows.ZwrotyWindow">
+            <summary>
+            Interaction logic for ZwrotyWindow.xaml
+            </summary>
+            <summary>
+            ZwrotyWindow
+            </summary>
+        </member>
+        <member name="M:ProjektSemestralny.Windows.ZwrotyWindow.Operations(System.String,System.Int32)">
+            <summary>
+            The <c>Operations</c> method.
+            It allows  to Add, Update and Delete operations
+            </summary>
+            <param name="statement"></param>
+            <param name="state"></param>
+        </member>
+        <member name="M:ProjektSemestralny.Windows.ZwrotyWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
         <member name="T:ProjektSemestralny.SelectTableWindow">
             <summary>
             Interaction logic for Window1.xaml

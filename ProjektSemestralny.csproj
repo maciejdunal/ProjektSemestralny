@@ -101,6 +101,9 @@
     <Compile Include="Windows\WypozyczeniaWindow.xaml.cs">
       <DependentUpon>WypozyczeniaWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\ZwrotyWindow.xaml.cs">
+      <DependentUpon>ZwrotyWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WypozyczalniaGierkomputerowychModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -159,6 +162,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\WypozyczeniaWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\ZwrotyWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

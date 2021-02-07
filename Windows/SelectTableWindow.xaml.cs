@@ -91,8 +91,17 @@ namespace ProjektSemestralny
                 nextWindow.ShowDialog();
                 currentWindow.Show();
             }
-            else
-                MessageBox.Show("The view is not implemented yet");
+            if (selectedItem == "Zwroty")
+            {
+                var currentWindow = Application.Current.Windows[1];
+                currentWindow.Hide();
+
+                Windows.ZwrotyWindow nextWindow = new Windows.ZwrotyWindow();
+                nextWindow.ShowDialog();
+                currentWindow.Show();
+            }
+            else { }
+                
         }
 
         private void cancelTableButton_Click(object sender, RoutedEventArgs e)
