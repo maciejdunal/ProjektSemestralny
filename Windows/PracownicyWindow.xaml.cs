@@ -22,6 +22,9 @@ namespace ProjektSemestralny.Windows
     /// </summary>
     public partial class PracownicyWindow : Window
     {
+        /// <summary>
+        /// <c>PracownicyWindow</c> window initialization
+        /// </summary>
         public PracownicyWindow()
         {
             InitializeComponent();
@@ -36,6 +39,10 @@ namespace ProjektSemestralny.Windows
             Close();
         }
 
+        /// <summary>
+        /// The <c>UpdateDataGrid</c> method.
+        /// Executes a query that returns a given table
+        /// </summary>
         public void UpdateDataGrid()
         {
             SqlCommand cmd = DatabaseService.con.CreateCommand();
@@ -168,8 +175,15 @@ namespace ProjektSemestralny.Windows
                     this.UpdateDataGrid();
                 }
             }
-            catch (Exception ex) { }
+            catch (Exception) { }
         }
+
+        /// <summary>
+        /// The <c>MyDataGrid_SelectionChanged</c> method.
+        /// Retrieves the values from the selected row into the appropriate text fields
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void MyDataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             DataGrid dg = sender as DataGrid;

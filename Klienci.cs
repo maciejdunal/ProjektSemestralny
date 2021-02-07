@@ -11,23 +11,39 @@ namespace ProjektSemestralny
 {
     using System;
     using System.Collections.Generic;
-    
+
+    /// <summary>
+    /// Class <c>Gry</c> contains values of 'Klienci' table
+    /// </summary>
     public partial class Klienci
     {
+        /// <summary>
+        /// Constructs a new <see cref="Klienci"/> instance.
+        /// </summary>
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Klienci()
         {
             this.Wypozyczenias = new HashSet<Wypozyczenia>();
         }
-    
+
+        /// <value>Gets the value of ID_klienta</value>
         public int ID_klienta { get; set; }
+        /// <value>Gets the value of Nazwisko</value>
         public string Nazwisko { get; set; }
+        /// <value>Gets the value of Imie</value>
         public string Imie { get; set; }
+        /// <value>Gets the value of Adres</value>
         public string Adres { get; set; }
+        /// <value>Gets the value of Kod_pocztowy</value>
         public string Kod_pocztowy { get; set; }
+        /// <value>Gets the value of Data_urodzenia</value>
         public System.DateTime Data_urodzenia { get; set; }
+        /// <value>Gets the value of Number_DO</value>
         public string Numer_DO { get; set; }
-    
+
+        /// <summary>
+        /// Gets values of <c>Wypozyczenia</c> table
+        /// </summary>
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Wypozyczenia> Wypozyczenias { get; set; }
     }

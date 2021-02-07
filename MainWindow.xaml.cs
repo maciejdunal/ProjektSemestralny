@@ -24,7 +24,7 @@ namespace ProjektSemestralny
     public partial class MainWindow : Window
     {
         /// <summary>
-        /// Login window initialization
+        /// <c>MainWindow</c> (Login) window initialization
         /// </summary>
         public MainWindow()
         {

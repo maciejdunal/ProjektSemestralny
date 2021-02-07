@@ -11,15 +11,27 @@ namespace ProjektSemestralny
 {
     using System;
     using System.Collections.Generic;
-    
+    /// <summary>
+    /// Class <c>Zwroty</c> contains values of 'Zwroty' table
+    /// </summary>
     public partial class Zwroty
     {
+        /// <value>Gets the value of ID_wypozyczenia</value>
         public int ID_wypozyczenia { get; set; }
+        /// <value>Gets the value of ID_pracownika</value>
         public int ID_pracownika { get; set; }
+        /// <value>Gets the value of data_zwrotu</value>
         public System.DateTime data_zwrotu { get; set; }
+        /// <value>Gets the value of doplaty</value>
         public int doplaty { get; set; }
-    
+
+        /// <summary>
+        /// <value>Gets <c>Pracownicy</c>virtual properties</value>
+        /// </summary>
         public virtual Pracownicy Pracownicy { get; set; }
+        /// <summary>
+        /// <value>Gets <c>Wypozyczenia</c>virtual properties</value>
+        /// </summary>
         public virtual Wypozyczenia Wypozyczenia { get; set; }
     }
 }

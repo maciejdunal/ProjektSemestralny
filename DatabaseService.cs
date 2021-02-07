@@ -37,7 +37,7 @@ namespace ProjektSemestralny
             {
                 con.Open();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("Invalid user name or password", "Error");
             }

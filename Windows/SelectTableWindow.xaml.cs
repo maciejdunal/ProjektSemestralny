@@ -48,7 +48,7 @@ namespace ProjektSemestralny
         }
         /// <summary>
         /// The <c>selectTableButton_Click</c> method.
-        /// Opens table managment for selected table
+        /// Opens table management for selected table
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
