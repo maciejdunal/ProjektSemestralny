@@ -226,7 +226,8 @@
         </member>
         <member name="M:ProjektSemestralny.Windows.PracownicyWindow.MyDataGrid_SelectionChanged(System.Object,System.Windows.Controls.SelectionChangedEventArgs)">
             <summary>
-            
+            The <c>MyDataGrid_SelectionChanged</c> method.
+            Retrieves the values from the selected row into the appropriate text fields
             </summary>
             <param name="sender"></param>
             <param name="e"></param>
@@ -263,6 +264,14 @@
             <param name="statement"></param>
             <param name="state"></param>
         </member>
+        <member name="M:ProjektSemestralny.Windows.WypozyczeniaWindow.MyDataGrid_SelectionChanged(System.Object,System.Windows.Controls.SelectionChangedEventArgs)">
+            <summary>
+            The <c>MyDataGrid_SelectionChanged</c> method.
+            Retrieves the values from the selected row into the appropriate text fields
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
         <member name="M:ProjektSemestralny.Windows.WypozyczeniaWindow.InitializeComponent">
             <summary>
             InitializeComponent
@@ -294,6 +303,14 @@
             </summary>
             <param name="statement"></param>
             <param name="state"></param>
+        </member>
+        <member name="M:ProjektSemestralny.Windows.ZwrotyWindow.MyDataGrid_SelectionChanged(System.Object,System.Windows.Controls.SelectionChangedEventArgs)">
+            <summary>
+            The <c>MyDataGrid_SelectionChanged</c> method.
+            Retrieves the values from the selected row into the appropriate text fields
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
         </member>
         <member name="M:ProjektSemestralny.Windows.ZwrotyWindow.InitializeComponent">
             <summary>
@@ -359,6 +376,14 @@
             <param name="statement"></param>
             <param name="state"></param>
         </member>
+        <member name="M:ProjektSemestralny.KlienciWindow.MyDataGrid_SelectionChanged(System.Object,System.Windows.Controls.SelectionChangedEventArgs)">
+            <summary>
+            The <c>MyDataGrid_SelectionChanged</c> method.
+            Retrieves the values from the selected row into the appropriate text fields
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
         <member name="M:ProjektSemestralny.KlienciWindow.InitializeComponent">
             <summary>
             InitializeComponent
@@ -390,6 +415,14 @@
             </summary>
             <param name="statement"></param>
             <param name="state"></param>
+        </member>
+        <member name="M:ProjektSemestralny.GryWindow.MyDataGrid_SelectionChanged(System.Object,System.Windows.Controls.SelectionChangedEventArgs)">
+            <summary>
+            The <c>MyDataGrid_SelectionChanged</c> method.
+            Retrieves the values from the selected row into the appropriate text fields
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
         </member>
         <member name="M:ProjektSemestralny.GryWindow.InitializeComponent">
             <summary>

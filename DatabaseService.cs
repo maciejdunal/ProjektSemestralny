@@ -22,6 +22,7 @@ namespace ProjektSemestralny
         private const String CONN_STRING = "Data Source=MACIEKDELL;Initial Catalog = Wypozyczalnia_Gier_komputerowych;";
         public static SqlConnection con;
 
+        #region OpenConnectionMethod
         /// <summary>
         /// The <c>OpenConnection</c> Method .
         /// Connects to the database
@@ -42,6 +43,9 @@ namespace ProjektSemestralny
                 MessageBox.Show("Invalid user name or password", "Error");
             }
         }
+        #endregion
+
+        #region AddCredentialsMethod
         /// <summary>
         /// The <c>AddCredentials</c> method.
         /// Takes and saves username parameter and password parameter to ConnectionString
@@ -53,6 +57,9 @@ namespace ProjektSemestralny
         {
             return CONN_STRING + "User ID=" + username + ";Password=" + password;
         }
+        #endregion
+
+        #region ReadTablesMethod
         /// <summary>
         /// Reads database table list
         /// </summary>
@@ -74,5 +81,6 @@ namespace ProjektSemestralny
 
             return result;
         }
+        #endregion
     }
 }

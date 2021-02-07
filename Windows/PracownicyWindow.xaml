@@ -10,15 +10,15 @@ Title="Pracownicy table" Height="800" Width="1030" Loaded="Window_Loaded" Closed
         <DataGrid x:Name="MyDataGrid" HorizontalAlignment="Left" Height="400" Margin="10,10,0,0" VerticalAlignment="Top" Width="1000" SelectionChanged="MyDataGrid_SelectionChanged" Grid.ColumnSpan="2"/>
         <GroupBox Header="Pracownicy" HorizontalAlignment="Left" Height="86" Margin="10,415,0,0" VerticalAlignment="Top" Width="1005" Grid.ColumnSpan="2"/>
         <TextBox x:Name="ID_pracownika_tb" HorizontalAlignment="Left" Height="25" Margin="17,468,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165"/>
-        <TextBox x:Name="Imie_tb" HorizontalAlignment="Left" Height="25" Margin="182,468,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165"/>
-        <TextBox x:Name="Nazwisko_tb" HorizontalAlignment="Left" Height="25" Margin="347,468,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165"/>
+        <TextBox x:Name="Imie_tb" HorizontalAlignment="Left" Height="25" Margin="347,468,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165"/>
+        <TextBox x:Name="Nazwisko_tb" HorizontalAlignment="Left" Height="25" Margin="182,468,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165"/>
         <DatePicker x:Name="Data_urodzenia_datapicker" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="512,468,0,0" Height="25" Width="165"/>
         <TextBox x:Name="Stanowisko_tb" HorizontalAlignment="Left" Height="25" Margin="843,468,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165"/>
         <TextBox x:Name="Adres_tb" HorizontalAlignment="Left" Height="25" Margin="677,468,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="166"/>
 
         <Label Content="ID pracownika" HorizontalAlignment="Left" Margin="17,442,0,0" VerticalAlignment="Top" Width="141"/>
-        <Label Content="Imie" HorizontalAlignment="Left" Height="27" Margin="182,440,0,0" VerticalAlignment="Top" Width="142"/>
-        <Label Content="Nazwisko" HorizontalAlignment="Left" Height="26" Margin="347,442,0,0" VerticalAlignment="Top" Width="142"/>
+        <Label Content="Nazwisko" HorizontalAlignment="Left" Height="26" Margin="182,442,0,0" VerticalAlignment="Top" Width="142"/>
+        <Label Content="Imie" HorizontalAlignment="Left" Height="27" Margin="347,442,0,0" VerticalAlignment="Top" Width="142"/>
         <Label Content="Data urodzenia" HorizontalAlignment="Left" Height="26" Margin="512,442,0,0" VerticalAlignment="Top" Width="141"/>
         <Label Content="Adres" HorizontalAlignment="Left" Height="26" Margin="677,442,0,0" VerticalAlignment="Top" Width="141" Grid.ColumnSpan="2"/>
         <Label Content="Stanowisko" HorizontalAlignment="Left" Height="26" Margin="843,442,0,0" VerticalAlignment="Top" Width="141"/>

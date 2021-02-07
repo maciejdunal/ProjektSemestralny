@@ -30,15 +30,21 @@ namespace ProjektSemestralny
             InitializeComponent();
         }
 
+        #region Window_Loaded
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             this.UpdateDataGrid();
         }
+        #endregion
+
+        #region Window_Closed
         private void Window_Closed(object sender, EventArgs e)
         {
             Close();
         }
+        #endregion
 
+        #region UpdateDataGridMethod
         /// <summary>
         /// The <c>UpdateDataGrid</c> method.
         /// Executes a query that returns a given table
@@ -64,7 +70,9 @@ namespace ProjektSemestralny
             MyDataGrid.ItemsSource = dt.DefaultView;
             dr.Close();
         }
+        #endregion
 
+        #region Buttons
         private void add_btn_Click(object sender, RoutedEventArgs e)
         {
             this.Operations("", 0);
@@ -107,7 +115,9 @@ namespace ProjektSemestralny
         {
             Close();
         }
+        #endregion
 
+        #region Operations
         /// <summary>
         /// The <c>Operations</c> method.
         /// It allows  to Add, Update and Delete operations
@@ -182,7 +192,9 @@ namespace ProjektSemestralny
             }
             catch (Exception) { }
         }
+        #endregion
 
+        #region MyDataGrid_SelectionChanged
         /// <summary>
         /// The <c>MyDataGrid_SelectionChanged</c> method.
         /// Retrieves the values from the selected row into the appropriate text fields
@@ -211,5 +223,6 @@ namespace ProjektSemestralny
 
             }
         }
+        #endregion
     }
 }

@@ -30,15 +30,21 @@ namespace ProjektSemestralny.Windows
             InitializeComponent();
         }
 
+        #region Window_Loaded
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             this.UpdateDataGrid();
         }
+        #endregion
+
+        #region Window_Closed
         private void Window_Closed(object sender, EventArgs e)
         {
             Close();
         }
+        #endregion
 
+        #region UpdateDataGridMethod
         /// <summary>
         /// The <c>UpdateDataGrid</c> method.
         /// Executes a query that returns a given table
@@ -63,7 +69,9 @@ namespace ProjektSemestralny.Windows
             MyDataGrid.ItemsSource = dt.DefaultView;
             dr.Close();
         }
+        #endregion
 
+        #region Buttons
         private void add_btn_Click(object sender, RoutedEventArgs e)
         {
             this.Operations("", 0);
@@ -105,7 +113,9 @@ namespace ProjektSemestralny.Windows
         {
             Close();
         }
+        #endregion
 
+        #region Operations(Add/Update/Delete/Reset)
         /// <summary>
         /// The <c>Operations</c> method.
         /// It allows  to Add, Update and Delete operations
@@ -161,8 +171,8 @@ namespace ProjektSemestralny.Windows
                     msg = "Row Deleted Successfully!";
 
                     cmd.CommandText =
-                        "DELETE FROM Klienci " +
-                        "WHERE ID_klienta = " +
+                        "DELETE FROM Pracownicy " +
+                        "WHERE ID_pracownika = " +
                             $@"{Int32.Parse(ID_pracownika_tb.Text)}";
                     break;
             }
@@ -177,7 +187,9 @@ namespace ProjektSemestralny.Windows
             }
             catch (Exception) { }
         }
+        #endregion
 
+        #region MyDataGrid_SelectionChanged
         /// <summary>
         /// The <c>MyDataGrid_SelectionChanged</c> method.
         /// Retrieves the values from the selected row into the appropriate text fields
@@ -205,5 +217,6 @@ namespace ProjektSemestralny.Windows
 
             }
         }
+        #endregion
     }
 }

@@ -31,6 +31,7 @@ namespace ProjektSemestralny
             InitializeComponent();
         }
 
+        #region Buttons
         /// <summary>
         /// The <c>connectButton_Click</c> method.
         /// Performing login to the database on 'Connect' button click.
@@ -55,6 +56,9 @@ namespace ProjektSemestralny
         {
             Close();
         }
+        #endregion
+
+        #region OpenSelectTableWindow method
         /// <summary>
         /// The <c>OpenSelectTableWindow</c> method.
         /// Opens next window.
@@ -68,6 +72,7 @@ namespace ProjektSemestralny
             nextWindow.ShowDialog();
             currentWindow.Show();
         }
+        #endregion
     }
 }
 

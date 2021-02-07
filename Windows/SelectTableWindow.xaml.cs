@@ -32,6 +32,7 @@ namespace ProjektSemestralny
             RenderTables();
         }
 
+        #region RenderTablesMethod
         /// <summary>
         /// The <c>RenderTables</c> method
         /// Writes the Query result to the dropdown
@@ -46,6 +47,9 @@ namespace ProjektSemestralny
 
             tableList.SelectedIndex = 0;
         }
+#endregion
+
+        #region Buttons
         /// <summary>
         /// The <c>selectTableButton_Click</c> method.
         /// Opens table management for selected table
@@ -108,5 +112,6 @@ namespace ProjektSemestralny
         {
             Close();
         }
+        #endregion
     }
 }
