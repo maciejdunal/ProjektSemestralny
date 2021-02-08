@@ -104,16 +104,6 @@
     <Compile Include="Windows\ZwrotyWindow.xaml.cs">
       <DependentUpon>ZwrotyWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="WypozyczalniaGierkomputerowychModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>WypozyczalniaGierkomputerowychModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="WypozyczalniaGierkomputerowychModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>WypozyczalniaGierkomputerowychModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="WypozyczalniaGierkomputerowychModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -201,19 +191,10 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>WypozyczalniaGierkomputerowychModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="WypozyczalniaGierkomputerowychModel.edmx.diagram">
-      <DependentUpon>WypozyczalniaGierkomputerowychModel.edmx</DependentUpon>
-    </None>
-    <None Include="Wypozyczalnia_Gier_komputerowychDataSet.xsc">
-      <DependentUpon>Wypozyczalnia_Gier_komputerowychDataSet.xsd</DependentUpon>
-    </None>
     <None Include="Wypozyczalnia_Gier_komputerowychDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>Wypozyczalnia_Gier_komputerowychDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
-    </None>
-    <None Include="Wypozyczalnia_Gier_komputerowychDataSet.xss">
-      <DependentUpon>Wypozyczalnia_Gier_komputerowychDataSet.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -232,16 +213,9 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
-    <Content Include="WypozyczalniaGierkomputerowychModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>WypozyczalniaGierkomputerowychModel.edmx</DependentUpon>
-      <LastGenOutput>WypozyczalniaGierkomputerowychModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="WypozyczalniaGierkomputerowychModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>WypozyczalniaGierkomputerowychModel.edmx</DependentUpon>
-      <LastGenOutput>WypozyczalniaGierkomputerowychModel.cs</LastGenOutput>
-    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Images\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

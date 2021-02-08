@@ -18,6 +18,7 @@ namespace ProjektSemestralny.Windows
         public ZwrotyWindow()
         {
             InitializeComponent();
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
         }
         #region Window_Loaded
         private void Window_Loaded(object sender, RoutedEventArgs e)

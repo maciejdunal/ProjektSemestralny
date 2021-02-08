@@ -15,7 +15,15 @@ namespace ProjektSemestralny
         public MainWindow()
         {
             InitializeComponent();
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
         }
+
+        #region Window_Closed
+        private void Window_Closed(object sender, System.EventArgs e)
+        {
+            Close();
+        }
+        #endregion
 
         #region Buttons
         /// <summary>
@@ -49,7 +57,7 @@ namespace ProjektSemestralny
         /// The <c>OpenSelectTableWindow</c> method.
         /// Opens next window.
         /// </summary>
-        public void OpenSelectTableWindow()
+        public static void OpenSelectTableWindow()
         {
             var currentWindow = Application.Current.Windows [0];
             currentWindow.Hide();

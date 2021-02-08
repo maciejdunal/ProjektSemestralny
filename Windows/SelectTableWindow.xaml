@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjektSemestralny"
         mc:Ignorable="d"
-        Title="Select table" Height="200" Width="430">
+        Title="Select table" Height="200" Width="430" ResizeMode="NoResize">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>

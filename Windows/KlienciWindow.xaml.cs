@@ -18,6 +18,7 @@ namespace ProjektSemestralny
         public KlienciWindow()
         {
             InitializeComponent();
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
         }
 
         #region Window_Loaded
@@ -104,6 +105,7 @@ namespace ProjektSemestralny
         private void back_btn_Click(object sender, RoutedEventArgs e)
         {
             Close();
+            MainWindow.OpenSelectTableWindow();
         }
         #endregion
 

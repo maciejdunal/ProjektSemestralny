@@ -18,6 +18,7 @@ namespace ProjektSemestralny
         public GryWindow()
         {
             InitializeComponent();
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
         }
 
         #region Window_Loaded

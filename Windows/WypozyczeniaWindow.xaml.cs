@@ -18,6 +18,7 @@ namespace ProjektSemestralny.Windows
         public WypozyczeniaWindow()
         {
             InitializeComponent();
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
         }
 
         #region Window_Loaded

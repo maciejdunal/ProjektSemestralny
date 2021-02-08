@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjektSemestralny.Windows"
         mc:Ignorable="d"
-Title="Pracownicy table" Height="800" Width="1030" Loaded="Window_Loaded" Closed="Window_Closed">
+Title="Pracownicy table" Height="800" Width="1030" Loaded="Window_Loaded" Closed="Window_Closed" ResizeMode="NoResize">
     <Grid>
         <DataGrid x:Name="MyDataGrid" HorizontalAlignment="Left" Height="400" Margin="10,10,0,0" VerticalAlignment="Top" Width="1000" SelectionChanged="MyDataGrid_SelectionChanged" Grid.ColumnSpan="2"/>
         <GroupBox Header="Pracownicy" HorizontalAlignment="Left" Height="86" Margin="10,415,0,0" VerticalAlignment="Top" Width="1005" Grid.ColumnSpan="2"/>

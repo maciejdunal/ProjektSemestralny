@@ -17,6 +17,7 @@ namespace ProjektSemestralny.Windows
         public PracownicyWindow()
         {
             InitializeComponent();
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
         }
 
         #region Window_Loaded

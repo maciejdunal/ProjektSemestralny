@@ -393,6 +393,19 @@
       </DesignerInfoPropertySet>
     </Options>
     <!-- Diagram content (shape and connector positions) -->
-    <Diagrams></Diagrams>
+    <Diagrams>
+      <Diagram DiagramId="921507c4b85b43469c97e4a738e63ccc" Name="Diagram1">
+        <EntityTypeShape EntityType="Wypozyczalnia_Gier_komputerowychModel.Gry" Width="1.5" PointX="0.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Wypozyczalnia_Gier_komputerowychModel.Klienci" Width="1.5" PointX="0.75" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Wypozyczalnia_Gier_komputerowychModel.Pracownicy" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="Wypozyczalnia_Gier_komputerowychModel.Wypozyczenia" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="Wypozyczalnia_Gier_komputerowychModel.Zwroty" Width="1.5" PointX="5.25" PointY="1.25" IsExpanded="true" />
+        <AssociationConnector Association="Wypozyczalnia_Gier_komputerowychModel.RelacjaGry" ManuallyRouted="false" />
+        <AssociationConnector Association="Wypozyczalnia_Gier_komputerowychModel.RelacjaDoKlient" ManuallyRouted="false" />
+        <AssociationConnector Association="Wypozyczalnia_Gier_komputerowychModel.RelacjaPracownicy" ManuallyRouted="false" />
+        <AssociationConnector Association="Wypozyczalnia_Gier_komputerowychModel.Relacjapracownicy2" ManuallyRouted="false" />
+        <AssociationConnector Association="Wypozyczalnia_Gier_komputerowychModel.RelacjaWypozyczenia" ManuallyRouted="false" />
+      </Diagram>
+    </Diagrams>
   </Designer>
 </edmx:Edmx>

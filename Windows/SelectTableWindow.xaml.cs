@@ -17,6 +17,7 @@ namespace ProjektSemestralny
         {
             InitializeComponent();
             RenderTables();
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
         }
 
         #region RenderTablesMethod
@@ -54,6 +55,7 @@ namespace ProjektSemestralny
         }
         #endregion
 
+        #region SelectedTable method
         /// <summary>
         /// The <c>SelectedTable</c> method.
         /// Opens table management for selected table
@@ -63,7 +65,8 @@ namespace ProjektSemestralny
             string selectedItem = tableList.SelectedItem.ToString();
             if (selectedItem == "Klienci")
             {
-                var currentWindow = Application.Current.Windows[1];
+                this.Visibility = System.Windows.Visibility.Hidden;
+                var currentWindow = Application.Current.Windows[0];
                 currentWindow.Hide();
 
                 KlienciWindow nextWindow = new KlienciWindow();
@@ -108,5 +111,6 @@ namespace ProjektSemestralny
             }
             else { }
         }
+        #endregion
     }
 }
