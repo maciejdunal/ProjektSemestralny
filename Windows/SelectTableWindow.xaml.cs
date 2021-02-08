@@ -45,6 +45,21 @@ namespace ProjektSemestralny
         /// <param name="e"></param>
         private void selectTableButton_Click(object sender, RoutedEventArgs e)
         {
+            SelectedTable();
+        }
+
+        private void cancelTableButton_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+        #endregion
+
+        /// <summary>
+        /// The <c>SelectedTable</c> method.
+        /// Opens table management for selected table
+        /// </summary>
+        public void SelectedTable()
+        {
             string selectedItem = tableList.SelectedItem.ToString();
             if (selectedItem == "Klienci")
             {
@@ -92,13 +107,6 @@ namespace ProjektSemestralny
                 currentWindow.Show();
             }
             else { }
-                
         }
-
-        private void cancelTableButton_Click(object sender, RoutedEventArgs e)
-        {
-            Close();
-        }
-        #endregion
     }
 }

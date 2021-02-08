@@ -344,6 +344,12 @@
             <param name="sender"></param>
             <param name="e"></param>
         </member>
+        <member name="M:ProjektSemestralny.SelectTableWindow.SelectedTable">
+            <summary>
+            The <c>SelectedTable</c> method.
+            Opens table management for selected table
+            </summary>
+        </member>
         <member name="M:ProjektSemestralny.SelectTableWindow.InitializeComponent">
             <summary>
             InitializeComponent
