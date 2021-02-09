@@ -37,7 +37,11 @@ namespace ProjektSemestralny
         private void connectButton_Click(object sender, RoutedEventArgs e)
         {
             DatabaseService.OpenConnection(logintb.Text, passwordtb.Password);
-            OpenSelectTableWindow();
+
+            this.Hide();
+            SelectTableWindow sec = new SelectTableWindow();
+            sec.ShowDialog();
+            
         }
 
         /// <summary>
@@ -49,22 +53,6 @@ namespace ProjektSemestralny
         private void cancelButton_Click(object sender, RoutedEventArgs e)
         {
             Close();
-        }
-        #endregion
-
-        #region OpenSelectTableWindow method
-        /// <summary>
-        /// The <c>OpenSelectTableWindow</c> method.
-        /// Opens next window.
-        /// </summary>
-        public static void OpenSelectTableWindow()
-        {
-            var currentWindow = Application.Current.Windows [0];
-            currentWindow.Hide();
-
-            SelectTableWindow nextWindow = new SelectTableWindow();
-            nextWindow.ShowDialog();
-            currentWindow.Show();
         }
         #endregion
     }

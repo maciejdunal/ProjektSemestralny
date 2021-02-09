@@ -65,49 +65,33 @@ namespace ProjektSemestralny
             string selectedItem = tableList.SelectedItem.ToString();
             if (selectedItem == "Klienci")
             {
-                this.Visibility = System.Windows.Visibility.Hidden;
-                var currentWindow = Application.Current.Windows[0];
-                currentWindow.Hide();
-
-                KlienciWindow nextWindow = new KlienciWindow();
-                nextWindow.ShowDialog();
-                currentWindow.Show();
+                this.Hide();
+                KlienciWindow kli = new KlienciWindow();
+                kli.ShowDialog();
             }
             if (selectedItem == "Gry")
             {
-                var currentWindow = Application.Current.Windows[1];
-                currentWindow.Hide();
-
+                this.Hide();
                 GryWindow nextWindow = new GryWindow();
                 nextWindow.ShowDialog();
-                currentWindow.Show();
             }
             if (selectedItem == "Pracownicy")
             {
-                var currentWindow = Application.Current.Windows[1];
-                currentWindow.Hide();
-
+                this.Hide();
                 Windows.PracownicyWindow nextWindow = new Windows.PracownicyWindow();
                 nextWindow.ShowDialog();
-                currentWindow.Show();
             }
             if (selectedItem == "Wypozyczenia")
             {
-                var currentWindow = Application.Current.Windows[1];
-                currentWindow.Hide();
-
+                this.Hide();
                 Windows.WypozyczeniaWindow nextWindow = new Windows.WypozyczeniaWindow();
                 nextWindow.ShowDialog();
-                currentWindow.Show();
             }
             if (selectedItem == "Zwroty")
             {
-                var currentWindow = Application.Current.Windows[1];
-                currentWindow.Hide();
-
+                this.Hide();
                 Windows.ZwrotyWindow nextWindow = new Windows.ZwrotyWindow();
                 nextWindow.ShowDialog();
-                currentWindow.Show();
             }
             else { }
         }
