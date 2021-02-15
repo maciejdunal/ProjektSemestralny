@@ -23,7 +23,7 @@ namespace ProjektSemestralny
         private void Window_Closed(object sender, System.EventArgs e)
         {
             this.Close();
-            MainWindow log = new MainWindow();
+            LoginWindow log = new LoginWindow();
             log.ShowDialog();
         }
         #endregion
@@ -60,7 +60,7 @@ namespace ProjektSemestralny
         private void cancelTableButton_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
-            MainWindow log = new MainWindow();
+            LoginWindow log = new LoginWindow();
             log.ShowDialog();
         }
         #endregion

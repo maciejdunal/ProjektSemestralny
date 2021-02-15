@@ -665,20 +665,20 @@
             Application Entry Point.
             </summary>
         </member>
-        <member name="T:ProjektSemestralny.MainWindow">
+        <member name="T:ProjektSemestralny.LoginWindow">
             <summary>
             Interaction logic for MainWindow.xaml
             </summary>
             <summary>
-            MainWindow
+            LoginWindow
             </summary>
         </member>
-        <member name="M:ProjektSemestralny.MainWindow.#ctor">
+        <member name="M:ProjektSemestralny.LoginWindow.#ctor">
             <summary>
             <c>MainWindow</c> (Login) window initialization
             </summary>
         </member>
-        <member name="M:ProjektSemestralny.MainWindow.connectButton_Click(System.Object,System.Windows.RoutedEventArgs)">
+        <member name="M:ProjektSemestralny.LoginWindow.connectButton_Click(System.Object,System.Windows.RoutedEventArgs)">
             <summary>
             The <c>connectButton_Click</c> method.
             Performing login to the database on 'Connect' button click.
@@ -688,7 +688,7 @@
             <param name="sender"></param>
             <param name="e"></param>
         </member>
-        <member name="M:ProjektSemestralny.MainWindow.cancelButton_Click(System.Object,System.Windows.RoutedEventArgs)">
+        <member name="M:ProjektSemestralny.LoginWindow.cancelButton_Click(System.Object,System.Windows.RoutedEventArgs)">
             <summary>
             The <c>cancelButton_Click</c> method.
             Closing application on 'Cancel' button click.
@@ -696,7 +696,7 @@
             <param name="sender"></param>
             <param name="e"></param>
         </member>
-        <member name="M:ProjektSemestralny.MainWindow.InitializeComponent">
+        <member name="M:ProjektSemestralny.LoginWindow.InitializeComponent">
             <summary>
             InitializeComponent
             </summary>

@@ -8,12 +8,12 @@ namespace ProjektSemestralny
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class LoginWindow : Window
     {
         /// <summary>
         /// <c>MainWindow</c> (Login) window initialization
         /// </summary>
-        public MainWindow()
+        public LoginWindow()
         {
             InitializeComponent();
             WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
