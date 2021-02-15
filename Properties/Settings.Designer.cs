@@ -22,23 +22,11 @@ namespace ProjektSemestralny.Properties {
                 return defaultInstance;
             }
         }
-        
+
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=MACIEKDELL;Integrated Security=True;Connect Timeout=30;Encrypt=False;" +
-            "TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=Fal" +
-            "se")]
-        public string Connection_String {
-            get {
-                return ((string)(this["Connection_String"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=MACIEKDELL;Initial Catalog=Wypozyczalnia_Gier_komputerowych;Integrate" +
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=localhost;Initial Catalog=Wypozyczalnia_Gier_komputerowych;Integrate" +
             "d Security=True")]
         public string Wypozyczalnia_Gier_komputerowychConnectionString {
             get {

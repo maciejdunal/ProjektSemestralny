@@ -7,14 +7,14 @@ namespace ProjektSemestralny
 {
     class DatabaseService
     {   
-        private const String CONN_STRING = "Data Source=MACIEKDELL;Initial Catalog = Wypozyczalnia_Gier_komputerowych;";
+        private const String CONN_STRING = "Data Source=localhost;Initial Catalog = Wypozyczalnia_Gier_komputerowych;";
         public static SqlConnection con;
 
         #region OpenConnectionMethod
         /// <summary>
         /// The <c>OpenConnection</c> Method .
-        /// Connects to the database
-        /// Takes username parameter and password parameter to use it in connection to database
+        /// Connects to the database.
+        /// Takes username parameter and password parameter to use it in connection to database.
         /// </summary>
         /// <param name="username"></param>
         /// <param name="password"></param>
@@ -22,13 +22,14 @@ namespace ProjektSemestralny
         {
 
             con = new SqlConnection(AddCredentials(username, password));
+
             try
             {
                 con.Open();
             }
             catch (Exception)
             {
-                MessageBox.Show("Invalid user name or password", "Error");
+                MessageBox.Show("Invalid username or password. Please try again", "Error");
             }
         }
         #endregion

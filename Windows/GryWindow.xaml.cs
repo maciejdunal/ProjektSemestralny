@@ -65,15 +65,29 @@ namespace ProjektSemestralny
         #region Buttons
         private void add_btn_Click(object sender, RoutedEventArgs e)
         {
-            this.Operations("", 0);
-            add_btn.IsEnabled = false;
-            update_btn.IsEnabled = true;
-            delete_btn.IsEnabled = true;
+            try
+            {
+                this.Operations("", 0);
+                add_btn.IsEnabled = false;
+                update_btn.IsEnabled = true;
+                delete_btn.IsEnabled = true;
+            }
+            catch
+            {
+                MessageBox.Show("Invalid data provided. Provide correct data (remember the appropriate data types)", "Error");
+            }
         }
 
         private void update_btn_Click(object sender, RoutedEventArgs e)
         {
-            this.Operations("", 1);
+            try
+            {
+                this.Operations("", 1);
+            }
+            catch
+            {
+                MessageBox.Show("Invalid data provided. Provide correct data (remember the appropriate data types)", "Error");
+            }
         }
 
         private void delete_btn_Click(object sender, RoutedEventArgs e)
@@ -102,11 +116,13 @@ namespace ProjektSemestralny
 
         private void back_btn_Click(object sender, RoutedEventArgs e)
         {
-            Close();
+            this.Close();
+            SelectTableWindow sel = new SelectTableWindow();
+            sel.ShowDialog();
         }
         #endregion
 
-        #region Button
+        #region Operations(Add/Update/Delete/Reset)
         /// <summary>
         /// The <c>Operations</c> method.
         /// It allows  to Add, Update and Delete operations

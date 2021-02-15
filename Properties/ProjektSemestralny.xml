@@ -7,8 +7,8 @@
         <member name="M:ProjektSemestralny.DatabaseService.OpenConnection(System.String,System.String)">
             <summary>
             The <c>OpenConnection</c> Method .
-            Connects to the database
-            Takes username parameter and password parameter to use it in connection to database
+            Connects to the database.
+            Takes username parameter and password parameter to use it in connection to database.
             </summary>
             <param name="username"></param>
             <param name="password"></param>
@@ -695,12 +695,6 @@
             </summary>
             <param name="sender"></param>
             <param name="e"></param>
-        </member>
-        <member name="M:ProjektSemestralny.MainWindow.OpenSelectTableWindow">
-            <summary>
-            The <c>OpenSelectTableWindow</c> method.
-            Opens next window.
-            </summary>
         </member>
         <member name="M:ProjektSemestralny.MainWindow.InitializeComponent">
             <summary>

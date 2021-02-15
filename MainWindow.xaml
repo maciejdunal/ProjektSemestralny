@@ -5,21 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjektSemestralny"
         mc:Ignorable="d"
-        Title="Connect to database..." HorizontalAlignment="Center" VerticalAlignment="Top" Height="200" Width="400" ResizeMode="NoResize" Visibility="Visible" Background="{x:Null}" Closed="Window_Closed">
-    <Grid Margin="0,0,0,-8">
-        <Grid.Background>
-            <ImageBrush ImageSource="login_window.png"/>
-        </Grid.Background>
-
-        <TextBox x:Name="logintb" HorizontalAlignment="Left" Height="21" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" Margin="150,26,0,0"/>
-        <PasswordBox x:Name="passwordtb" HorizontalAlignment="Left" VerticalAlignment="Top" Height="21" Width="165" Margin="150,67,0,0"/>
-
-        <Label Content="Password:" HorizontalAlignment="Left" Foreground="White" VerticalAlignment="Top" Margin="70,64,0,0" Width="80" Height="28" FontSize="14" FontFamily="Arial"/>
-        <Label Content="Username:" HorizontalAlignment="Left" Foreground="White" VerticalAlignment="Top" Margin="70,22,0,0" Width="80" Height="30" RenderTransformOrigin="0.554,-0.889" FontSize="14" FontFamily="Arial"/>
-        <Button x:Name="connectButton" Content="Connect" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Margin="158,117,0,0" Height="30" Click="connectButton_Click" FontFamily="Arial" Background="#FFDDDDDD" BorderBrush="#FF1A36E8"/>
-        <Button x:Name="cancelButton" Content="Cancel" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Margin="274,117,0,0" Height="30" Click="cancelButton_Click" FontFamily="Arial" BorderBrush="#FF1A36E8" RenderTransformOrigin="0.5,0.5">
-        </Button>
+        Title="Connect to database..."  Height="355" Width="320" ResizeMode="NoResize" Background="#FFB233" Closed="Window_Closed">
+    <Border Background="#2e3137" CornerRadius="20" Margin="20">
+        <StackPanel Margin="20">
+            <Label Content="Login" Foreground="White" FontSize="25" HorizontalAlignment="Center"/>
+            <Separator></Separator>
+            <Label Content="Username:" Foreground="White"/>
+            <TextBox x:Name="logintb" Background="#545d6a" FontSize="18" Foreground="White"/>
+            <Label Content="Password:" Foreground="White"/>
+            <PasswordBox x:Name="passwordtb" Background="#545d6a" FontSize="18" Foreground="White"/>
 
 
-    </Grid>
+            <Button x:Name="connectButton" Content="Connect" Margin="60 20" Click="connectButton_Click"  Background="#545d6a" Foreground="White" />
+            <Button x:Name="cancelButton" Content="Cancel"  Margin="60 0" Click="cancelButton_Click" Background="#545d6a" Foreground="White"/>
+        </StackPanel>
+    </Border>
 </Window>

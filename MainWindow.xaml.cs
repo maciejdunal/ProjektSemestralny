@@ -1,9 +1,10 @@
 ﻿using System.Windows;
+using System;
 
 
 namespace ProjektSemestralny
 {
-    
+
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
@@ -21,7 +22,7 @@ namespace ProjektSemestralny
         #region Window_Closed
         private void Window_Closed(object sender, System.EventArgs e)
         {
-            Close();
+            Application.Current.Shutdown();
         }
         #endregion
 
@@ -36,12 +37,27 @@ namespace ProjektSemestralny
         /// <param name="e"></param>
         private void connectButton_Click(object sender, RoutedEventArgs e)
         {
-            DatabaseService.OpenConnection(logintb.Text, passwordtb.Password);
+            try
+            {
+                DatabaseService.OpenConnection(logintb.Text, passwordtb.Password);
+                
+               // this.Hide();
+                SelectTableWindow sec = new SelectTableWindow();
+                sec.Show();
+                this.Hide();
+                //sec.ShowDialog();
+            }
 
-            this.Hide();
-            SelectTableWindow sec = new SelectTableWindow();
-            sec.ShowDialog();
-            
+            catch (Exception)
+            {
+                logintb.Focus();
+                logintb.Clear();
+                passwordtb.Clear();
+            }
+            finally 
+            {
+
+            }
         }
 
         /// <summary>
@@ -52,7 +68,7 @@ namespace ProjektSemestralny
         /// <param name="e"></param>
         private void cancelButton_Click(object sender, RoutedEventArgs e)
         {
-            Close();
+            Application.Current.Shutdown();
         }
         #endregion
     }

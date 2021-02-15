@@ -5,20 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjektSemestralny"
         mc:Ignorable="d"
-        Title="Select table" Height="200" Width="430" ResizeMode="NoResize">
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-        <ComboBox x:Name="tableList" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Margin="115,33,0,0" Grid.Row="2" Height="25" SelectedItem="Binding Selectedtable">
-        </ComboBox>
-        <Label Content="Open" HorizontalAlignment="Left" Margin="59,29,0,101.8" Grid.Row="2" Width="51" RenderTransformOrigin="0.545,-0.445" FontSize="14"/>
-        <Button x:Name="selectTableButton" Content="OK" HorizontalAlignment="Left" Margin="115,97,0,0" Grid.Row="2" VerticalAlignment="Top" Width="90" Height="40" Click="selectTableButton_Click"/>
-        
-        <Label Content="table" HorizontalAlignment="Left" Margin="320,29,0,101.8" Grid.Row="2" Width="51" RenderTransformOrigin="0.545,-0.445" FontSize="14"/>
-        <Button x:Name="cancelTableButton" Content="Cancel" HorizontalAlignment="Left" Margin="225,97,0,0" Grid.Row="2" VerticalAlignment="Top" Width="90" Height="40" Click="cancelTableButton_Click"/>
+        Title="Select table" Height="280" Width="430" ResizeMode="NoResize" Background="#FFB233" Closed="Window_Closed">
+    <Border Background="#2e3137" CornerRadius="20" Margin="20">
+        <StackPanel Margin="20" >
+            <Label Content="Select table" Foreground="White" FontSize="25" HorizontalAlignment="Center"/>
+            <Separator></Separator>
+            <ComboBox x:Name="tableList"  Width="200"  Height="25" Background="#545d6a" Margin="5" FontSize="14" SelectedItem="Binding Selectedtable"/>
+            <Button x:Name="selectTableButton" Content="OK" Margin="60 15" Background="#545d6a" Foreground="White" Click="selectTableButton_Click"/>
 
-    </Grid>
+            <Button x:Name="cancelTableButton" Content="Cancel" Margin="60 0" Background="#545d6a" Foreground="White" Click="cancelTableButton_Click"/>
+
+        </StackPanel>
+    </Border>
 </Window>

@@ -19,6 +19,14 @@ namespace ProjektSemestralny
             RenderTables();
             WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
         }
+        #region Window_Closed
+        private void Window_Closed(object sender, System.EventArgs e)
+        {
+            this.Close();
+            MainWindow log = new MainWindow();
+            log.ShowDialog();
+        }
+        #endregion
 
         #region RenderTablesMethod
         /// <summary>
@@ -51,7 +59,9 @@ namespace ProjektSemestralny
 
         private void cancelTableButton_Click(object sender, RoutedEventArgs e)
         {
-            Close();
+            this.Close();
+            MainWindow log = new MainWindow();
+            log.ShowDialog();
         }
         #endregion
 
