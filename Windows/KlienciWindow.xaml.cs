@@ -68,29 +68,24 @@ namespace ProjektSemestralny
         #region Buttons
         private void add_btn_Click(object sender, RoutedEventArgs e)
         {
-            try
-            {
+            try 
+            { 
                 this.Operations("", 0);
                 add_btn.IsEnabled = false;
                 update_btn.IsEnabled = true;
                 delete_btn.IsEnabled = true;
+                resetAll();
             }
-            catch
+            catch (Exception exc)
             {
-                MessageBox.Show("Invalid data provided. Provide correct data (remember the appropriate data types)", "Error");
+                MessageBox.Show(exc.Message, "Error");
             }
         }
 
         private void update_btn_Click(object sender, RoutedEventArgs e)
         {
-            try
-            {
-                this.Operations("", 1);
-            }
-            catch
-            {
-                MessageBox.Show("Invalid data provided. Provide correct data (remember the appropriate data types)", "Error");
-            }
+            this.Operations("", 1);
+            resetAll();
         }
         private void delete_btn_Click(object sender, RoutedEventArgs e)
         {
@@ -198,7 +193,10 @@ namespace ProjektSemestralny
                     this.UpdateDataGrid();
                 }
             }
-            catch (Exception) { }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message, "Error");
+            }
         }
         #endregion
 

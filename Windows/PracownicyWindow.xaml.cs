@@ -72,23 +72,18 @@ namespace ProjektSemestralny.Windows
                 add_btn.IsEnabled = false;
                 update_btn.IsEnabled = true;
                 delete_btn.IsEnabled = true;
+                resetAll();
             }
-            catch
+            catch (Exception exc)
             {
-                MessageBox.Show("Invalid data provided. Provide correct data (remember the appropriate data types)", "Error");
+                MessageBox.Show(exc.Message, "Error");
             }
         }
 
         private void update_btn_Click(object sender, RoutedEventArgs e)
         {
-            try
-            {
-                this.Operations("", 1);
-            }
-            catch
-            {
-                MessageBox.Show("Invalid data provided. Provide correct data (remember the appropriate data types)", "Error");
-            }
+            this.Operations("", 1);
+            resetAll();
         }
 
         private void delete_btn_Click(object sender, RoutedEventArgs e)
@@ -193,7 +188,10 @@ namespace ProjektSemestralny.Windows
                     this.UpdateDataGrid();
                 }
             }
-            catch (Exception) { }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message, "Error");
+            }
         }
         #endregion
 
