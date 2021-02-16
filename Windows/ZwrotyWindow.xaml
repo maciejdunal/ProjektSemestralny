@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjektSemestralny.Windows"
         mc:Ignorable="d"
-        Title="Zwroty table" Height="800" Width="1080" Loaded="Window_Loaded" Closed="Window_Closed" Background="#FFB233" ResizeMode="NoResize">
+        Title="Zwroty table" Height="800" Width="1080" Loaded="Window_Loaded" Closed="Window_Closed" Background="#FFB233" ResizeMode="NoResize" Icon="/ProjektSemestralny;component/Images/MDicon.jpg">
     <Border Background="#2e3137" CornerRadius="20" Margin="20">
         <Grid>
 

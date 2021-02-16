@@ -72,9 +72,10 @@ namespace ProjektSemestralny
                 update_btn.IsEnabled = true;
                 delete_btn.IsEnabled = true;
             }
-            catch
+            catch(Exception)
             {
                 MessageBox.Show("Invalid data provided. Provide correct data (remember the appropriate data types)", "Error");
+               // System.Windows.MessageBox.Show(ex.Message, "Error");
             }
         }
 

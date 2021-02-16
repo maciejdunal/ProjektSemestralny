@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjektSemestralny"
         mc:Ignorable="d"
-        Title="Connect to database..."  Height="355" Width="430" ResizeMode="NoResize" Background="#FFB233" Closed="Window_Closed">
+        Title="Connect to database..."  Height="355" Width="430" ResizeMode="NoResize" Background="#FFB233" Closed="Window_Closed" Icon="/Images/MDicon.jpg" >
     <Border Background="#2e3137" CornerRadius="20" Margin="20">
         <StackPanel Margin="60 20">
             <Label Content="Login" Foreground="White" FontSize="25" HorizontalAlignment="Center"/>
