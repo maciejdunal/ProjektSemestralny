@@ -65,11 +65,18 @@ namespace ProjektSemestralny
         #region Buttons
         private void add_btn_Click(object sender, RoutedEventArgs e)
         {
-            this.Operations("", 0);
-            add_btn.IsEnabled = false;
-            update_btn.IsEnabled = true;
-            delete_btn.IsEnabled = true;
-            resetAll();
+            try
+            {
+                this.Operations("", 0);
+                add_btn.IsEnabled = false;
+                update_btn.IsEnabled = true;
+                delete_btn.IsEnabled = true;
+                resetAll();
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message + "\n" + "Please provide correct data.", "Error");
+            }
         }
 
         private void update_btn_Click(object sender, RoutedEventArgs e)
@@ -96,6 +103,7 @@ namespace ProjektSemestralny
             add_btn.IsEnabled = true;
             update_btn.IsEnabled = false;
             delete_btn.IsEnabled = false;
+            ID_gry_tb.IsEnabled = true;
         }
 
         private void reset_btn_Click(object sender, RoutedEventArgs e)
@@ -210,7 +218,7 @@ namespace ProjektSemestralny
                 add_btn.IsEnabled = false;
                 update_btn.IsEnabled = true;
                 delete_btn.IsEnabled = true;
-
+                ID_gry_tb.IsEnabled = false;
             }
         }
         #endregion

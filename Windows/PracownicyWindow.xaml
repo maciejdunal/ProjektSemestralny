@@ -1,34 +1,209 @@
-﻿<Window x:Class="ProjektSemestralny.Windows.PracownicyWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:ProjektSemestralny.Windows"
-        mc:Ignorable="d"
-Title="Pracownicy table" Height="800" Width="1080" Loaded="Window_Loaded" Closed="Window_Closed" Background="#FFB233" ResizeMode="NoResize" Icon="/Images/MDicon.jpg">
-    <Border Background="#2e3137" CornerRadius="20" Margin="20">
+﻿<Window 
+    x:Class="ProjektSemestralny.Windows.PracownicyWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:ProjektSemestralny.Windows"
+    mc:Ignorable="d"
+    Title="Pracownicy table"         
+    Height="800" 
+    Width="1080" 
+    Loaded="Window_Loaded"
+    Closed="Window_Closed" 
+    Background="#FFB233" 
+    ResizeMode="NoResize" 
+    Icon="/ProjektSemestralny;component/Images/MDicon.jpg">
+    <Border
+        Background="#2e3137" 
+        CornerRadius="20" 
+        Margin="20">
         <Grid>
-            <DataGrid x:Name="MyDataGrid" BorderThickness="5px" HorizontalAlignment="Left" Height="400" Margin="10,10,0,0" VerticalAlignment="Top" Width="1000" SelectionChanged="MyDataGrid_SelectionChanged" Grid.ColumnSpan="2"/>
-            <GroupBox Header="Pracownicy" Foreground="white" HorizontalAlignment="Left" Height="86" Margin="10,415,0,0" VerticalAlignment="Top" Width="1005" Grid.ColumnSpan="2"/>
-            <TextBox x:Name="ID_pracownika_tb" Background="#545d6a" FontSize="18" Foreground="White" HorizontalAlignment="Left" Height="25" Margin="17,468,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165"/>
-            <TextBox x:Name="Imie_tb" Background="#545d6a" FontSize="18" Foreground="White" HorizontalAlignment="Left" Height="25" Margin="347,468,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165"/>
-            <TextBox x:Name="Nazwisko_tb" Background="#545d6a" FontSize="18" Foreground="White" HorizontalAlignment="Left" Height="25" Margin="182,468,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165"/>
-            <DatePicker x:Name="Data_urodzenia_datapicker" Background="#545d6a" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="512,468,0,0" Height="25" Width="165"/>
-            <TextBox x:Name="Stanowisko_tb" Background="#545d6a" FontSize="18" Foreground="White" HorizontalAlignment="Left" Height="25" Margin="843,468,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165"/>
-            <TextBox x:Name="Adres_tb" Background="#545d6a" FontSize="18" Foreground="White" HorizontalAlignment="Left" Height="25" Margin="677,468,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="166"/>
+            <DataGrid 
+                x:Name="MyDataGrid" 
+                BorderThickness="5px"  
+                Height="400" 
+                Margin="0,10,0,0" 
+                VerticalAlignment="Top" 
+                Width="1005" 
+                SelectionChanged="MyDataGrid_SelectionChanged" 
+                HorizontalAlignment="Stretch" 
+                HorizontalContentAlignment="Stretch" 
+                ColumnWidth="*"
+                IsReadOnly="True"/>
+            <GroupBox 
+                Header="Pracownicy"
+                Foreground="White" 
+                HorizontalAlignment="Left" 
+                Height="86" 
+                Margin="10,415,0,0" 
+                VerticalAlignment="Top" 
+                Width="1005" />
+            <TextBox 
+                x:Name="ID_pracownika_tb" 
+                Background="#545d6a" 
+                FontSize="18" Foreground="White" 
+                HorizontalAlignment="Left" 
+                Height="25" 
+                Margin="17,468,0,0" 
+                TextWrapping="Wrap" 
+                VerticalAlignment="Top" 
+                Width="165"/>
+            <TextBox 
+                x:Name="Imie_tb" 
+                Background="#545d6a" 
+                FontSize="18" 
+                Foreground="White" 
+                HorizontalAlignment="Left" 
+                Height="25" 
+                Margin="347,468,0,0" 
+                TextWrapping="Wrap" 
+                VerticalAlignment="Top"
+                Width="165"/>
+            <TextBox 
+                x:Name="Nazwisko_tb" 
+                Background="#545d6a" 
+                FontSize="18" 
+                Foreground="White" 
+                HorizontalAlignment="Left" 
+                Height="25" 
+                Margin="182,468,0,0" 
+                TextWrapping="Wrap" 
+                VerticalAlignment="Top" 
+                Width="165"/>
+            <DatePicker 
+                x:Name="Data_urodzenia_datapicker" 
+                Background="#545d6a" 
+                HorizontalAlignment="Left" 
+                VerticalAlignment="Top" 
+                Margin="512,468,0,0" 
+                Height="25" 
+                Width="165"/>
+            <TextBox 
+                x:Name="Stanowisko_tb" 
+                Background="#545d6a" 
+                FontSize="18" 
+                Foreground="White" 
+                HorizontalAlignment="Left" 
+                Height="25" 
+                Margin="843,468,0,0" 
+                TextWrapping="Wrap" 
+                VerticalAlignment="Top" 
+                Width="165"/>
+            <TextBox 
+                x:Name="Adres_tb" 
+                Background="#545d6a" 
+                FontSize="18" 
+                Foreground="White" 
+                HorizontalAlignment="Left" 
+                Height="25" 
+                Margin="677,468,0,0" 
+                TextWrapping="Wrap" 
+                VerticalAlignment="Top" 
+                Width="166"/>
 
-            <Label Content="ID pracownika" Foreground="white" HorizontalAlignment="Left" Margin="17,442,0,0" VerticalAlignment="Top" Width="141"/>
-            <Label Content="Nazwisko" Foreground="white" HorizontalAlignment="Left" Height="26" Margin="182,442,0,0" VerticalAlignment="Top" Width="142"/>
-            <Label Content="Imie" Foreground="white" HorizontalAlignment="Left" Height="27" Margin="347,442,0,0" VerticalAlignment="Top" Width="142"/>
-            <Label Content="Data urodzenia" Foreground="white" HorizontalAlignment="Left" Height="26" Margin="512,442,0,0" VerticalAlignment="Top" Width="141"/>
-            <Label Content="Adres" Foreground="white" HorizontalAlignment="Left" Height="26" Margin="677,442,0,0" VerticalAlignment="Top" Width="141" Grid.ColumnSpan="2"/>
-            <Label Content="Stanowisko" Foreground="white" HorizontalAlignment="Left" Height="26" Margin="843,442,0,0" VerticalAlignment="Top" Width="141"/>
-
-            <Button x:Name="add_btn" Content="Add" HorizontalAlignment="Left" Margin="120,564,0,0" VerticalAlignment="Top" Height="50" Width="180" Background="#545d6a" Foreground="White" Click="add_btn_Click"/>
-            <Button x:Name="update_btn" Content="Update" HorizontalAlignment="Left" Margin="442,564,0,0" VerticalAlignment="Top" Height="50" Width="180" IsEnabled="False" Background="#545d6a" Foreground="White" Click="update_btn_Click"/>
-            <Button x:Name="delete_btn" Content="Delete" HorizontalAlignment="Left" Margin="764,564,0,0" VerticalAlignment="Top" Height="50" Width="180" IsEnabled="False" Background="#545d6a" Foreground="White" Click="delete_btn_Click"/>
-            <Button x:Name="reset_btn" Content="Reset" HorizontalAlignment="Left" Margin="442,660,0,0" VerticalAlignment="Top" Height="50" Width="180" Background="#545d6a" Foreground="White" Click="reset_btn_Click"/>
-            <Button x:Name="back_btn" Content="Back" HorizontalAlignment="Left" Margin="764,660,0,0" VerticalAlignment="Top" Height="50" Width="180" Background="#545d6a" Foreground="White" Click="back_btn_Click"/>
+            <Label 
+                Content="ID pracownika" 
+                Foreground="white" 
+                HorizontalAlignment="Left"
+                Margin="17,442,0,0" 
+                VerticalAlignment="Top" 
+                Width="141"/>
+            <Label 
+                Content="Nazwisko" 
+                Foreground="white"
+                HorizontalAlignment="Left"
+                Height="26" 
+                Margin="182,442,0,0"
+                VerticalAlignment="Top"
+                Width="142"/>
+            <Label 
+                Content="Imie"
+                Foreground="white"
+                HorizontalAlignment="Left"
+                Height="27"
+                Margin="347,442,0,0"
+                VerticalAlignment="Top"
+                Width="142"/>
+            <Label 
+                Content="Data urodzenia"
+                Foreground="white"
+                HorizontalAlignment="Left"
+                Height="26" 
+                Margin="512,442,0,0"
+                VerticalAlignment="Top"
+                Width="141"/>
+            <Label 
+                Content="Adres" 
+                Foreground="white" 
+                HorizontalAlignment="Left" 
+                Height="26" 
+                Margin="677,442,0,0" 
+                VerticalAlignment="Top" 
+                Width="141" />
+            <Label 
+                Content="Stanowisko" 
+                Foreground="white" 
+                HorizontalAlignment="Left" 
+                Height="26" 
+                Margin="843,442,0,0" 
+                VerticalAlignment="Top" 
+                Width="141"/>
+            <Button 
+                x:Name="add_btn" 
+                Content="Add" 
+                HorizontalAlignment="Left" 
+                Margin="120,564,0,0" 
+                VerticalAlignment="Top" 
+                Height="50" 
+                Width="180" 
+                Background="#545d6a" 
+                Foreground="White" 
+                Click="add_btn_Click"/>
+            <Button 
+                x:Name="update_btn" 
+                Content="Update" 
+                HorizontalAlignment="Left"
+                Margin="442,564,0,0" 
+                VerticalAlignment="Top" 
+                Height="50" Width="180" 
+                IsEnabled="False" 
+                Background="#545d6a" 
+                Foreground="White" 
+                Click="update_btn_Click"/>
+            <Button 
+                x:Name="delete_btn" 
+                Content="Delete" 
+                HorizontalAlignment="Left" 
+                Margin="764,564,0,0" 
+                VerticalAlignment="Top" 
+                Height="50" Width="180" 
+                IsEnabled="False" 
+                Background="#545d6a" 
+                Foreground="White" 
+                Click="delete_btn_Click"/>
+            <Button 
+                x:Name="reset_btn" 
+                Content="Reset" 
+                HorizontalAlignment="Left" 
+                Margin="442,660,0,0" 
+                VerticalAlignment="Top" 
+                Height="50" 
+                Width="180" 
+                Background="#545d6a" 
+                Foreground="White" 
+                Click="reset_btn_Click"/>
+            <Button 
+                x:Name="back_btn" 
+                Content="Back"
+                HorizontalAlignment="Left" 
+                Margin="764,660,0,0" 
+                VerticalAlignment="Top" 
+                Height="50" 
+                Width="180" 
+                Background="#545d6a" 
+                Foreground="White" 
+                Click="back_btn_Click"/>
         </Grid>
     </Border>
 </Window>

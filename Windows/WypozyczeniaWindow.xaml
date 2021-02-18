@@ -5,29 +5,185 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjektSemestralny.Windows"
         mc:Ignorable="d"
-        Title="Wypozyczenia table" Height="800" Width="1080" Loaded="Window_Loaded" Closed="Window_Closed" Background="#FFB233" ResizeMode="NoResize" Icon="/Images/MDicon.jpg">
-    <Border  Background="#2e3137" CornerRadius="20" Margin="20">
+        Title="Wypozyczenia table"         
+        Height="800" 
+        Width="1080" 
+        Loaded="Window_Loaded"
+        Closed="Window_Closed" 
+        Background="#FFB233" 
+        ResizeMode="NoResize" 
+        Icon="/ProjektSemestralny;component/Images/MDicon.jpg">
+    <Border
+        Background="#2e3137" 
+        CornerRadius="20" 
+        Margin="20">
         <Grid>
-            <DataGrid x:Name="MyDataGrid" BorderThickness="5px" HorizontalAlignment="Left" Height="400" Margin="10,10,0,0" VerticalAlignment="Top" Width="1005" SelectionChanged="MyDataGrid_SelectionChanged" Grid.ColumnSpan="2"/>
-            <GroupBox Header="Wypozyczenia" Foreground="White" HorizontalAlignment="Left" Height="86" Margin="10,415,0,0" VerticalAlignment="Top" Width="1005" />
+            <DataGrid 
+                x:Name="MyDataGrid"
+                BorderThickness="5px"  
+                Height="400" 
+                Margin="0,10,0,0" 
+                VerticalAlignment="Top" 
+                Width="1005" 
+                SelectionChanged="MyDataGrid_SelectionChanged" 
+                HorizontalAlignment="Stretch" 
+                HorizontalContentAlignment="Stretch" 
+                ColumnWidth="*"
+                IsReadOnly="True"/>
+            <GroupBox 
+                Header="Wypozyczenia" 
+                Foreground="White" 
+                HorizontalAlignment="Left" 
+                Height="86" 
+                Margin="10,415,0,0" 
+                VerticalAlignment="Top" 
+                Width="1005" />
 
-            <TextBox x:Name="ID_wypozyczenia_tb" Background="#545d6a" FontSize="18" Foreground="White" HorizontalAlignment="Left" Height="25" Margin="17,468,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="198"/>
-            <TextBox x:Name="ID_gry_tb" Background="#545d6a" FontSize="18" Foreground="White" HorizontalAlignment="Left" Height="25" Margin="215,468,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="198"/>
-            <TextBox x:Name="ID_pracownika_tb" Background="#545d6a" FontSize="18" Foreground="White" HorizontalAlignment="Left" Height="25" Margin="413,468,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="198"/>
-            <TextBox x:Name="ID_klienta_tb" Background="#545d6a" FontSize="18" Foreground="White" HorizontalAlignment="Left" Height="25" Margin="611,468,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="198"/>
-            <DatePicker x:Name="Data_wypozyczenia_datapicker" Background="#545d6a" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="809,468,0,0" Height="25" Width="198"/>
+            <TextBox 
+                x:Name="ID_wypozyczenia_tb" 
+                Background="#545d6a" 
+                FontSize="18" 
+                Foreground="White" 
+                HorizontalAlignment="Left" 
+                Height="25" Margin="17,468,0,0" 
+                TextWrapping="Wrap" 
+                VerticalAlignment="Top" 
+                Width="198"/>
+            <TextBox 
+                x:Name="ID_gry_tb" 
+                Background="#545d6a" 
+                FontSize="18" 
+                Foreground="White" 
+                HorizontalAlignment="Left" 
+                Height="25" 
+                Margin="215,468,0,0" 
+                TextWrapping="Wrap" 
+                VerticalAlignment="Top" 
+                Width="198"/>
+            <TextBox 
+                x:Name="ID_pracownika_tb" 
+                Background="#545d6a" 
+                FontSize="18" 
+                Foreground="White" 
+                HorizontalAlignment="Left" 
+                Height="25" Margin="413,468,0,0" 
+                TextWrapping="Wrap" 
+                VerticalAlignment="Top" 
+                Width="198"/>
+            <TextBox 
+                x:Name="ID_klienta_tb" 
+                Background="#545d6a" 
+                FontSize="18" 
+                Foreground="White" 
+                HorizontalAlignment="Left" 
+                Height="25" 
+                Margin="611,468,0,0" 
+                TextWrapping="Wrap" 
+                VerticalAlignment="Top" 
+                Width="198"/>
+            <DatePicker 
+                x:Name="Data_wypozyczenia_datapicker" 
+                Background="#545d6a" 
+                HorizontalAlignment="Left" 
+                VerticalAlignment="Top" 
+                Margin="809,468,0,0" 
+                Height="25" 
+                Width="198"/>
+            <Label 
+                Content="ID wypozyczenia" 
+                Foreground="White" 
+                HorizontalAlignment="Left" 
+                Margin="17,442,0,0" 
+                VerticalAlignment="Top" 
+                Width="141"/>
+            <Label 
+                Content="ID Gry" 
+                Foreground="White" 
+                HorizontalAlignment="Left" 
+                Height="27"
+                Margin="216,440,0,0" 
+                VerticalAlignment="Top" 
+                Width="142"/>
+            <Label 
+                Content="ID pracownika" 
+                Foreground="White" 
+                HorizontalAlignment="Left" 
+                Height="26" 
+                Margin="415,442,0,0" 
+                VerticalAlignment="Top" 
+                Width="142"/>
+            <Label 
+                Content="ID klienta" 
+                Foreground="White"
+                HorizontalAlignment="Left" 
+                Height="26" 
+                Margin="614,442,0,0" 
+                VerticalAlignment="Top" 
+                Width="142"/>
+            <Label 
+                Content="Data wypozyczenia" 
+                Foreground="White" 
+                HorizontalAlignment="Left" 
+                Height="26" 
+                Margin="809,437,0,0" 
+                VerticalAlignment="Top" 
+                Width="140"/>
 
-            <Label Content="ID wypozyczenia" Foreground="White" HorizontalAlignment="Left" Margin="17,442,0,0" VerticalAlignment="Top" Width="141"/>
-            <Label Content="ID Gry" Foreground="White" HorizontalAlignment="Left" Height="27" Margin="216,440,0,0" VerticalAlignment="Top" Width="142"/>
-            <Label Content="ID pracownika" Foreground="White" HorizontalAlignment="Left" Height="26" Margin="415,442,0,0" VerticalAlignment="Top" Width="142" RenderTransformOrigin="-0.197,0.538"/>
-            <Label Content="ID klienta" Foreground="White" HorizontalAlignment="Left" Height="26" Margin="614,442,0,0" VerticalAlignment="Top" Width="142" RenderTransformOrigin="-0.197,0.538" Grid.ColumnSpan="2"/>
-            <Label Content="Data wypozyczenia" Foreground="White" HorizontalAlignment="Left" Height="26" Margin="809,437,0,0" VerticalAlignment="Top" Width="140" RenderTransformOrigin="0.907,0.577"/>
-
-            <Button x:Name="add_btn" Content="Add" HorizontalAlignment="Left" Margin="120,564,0,0" VerticalAlignment="Top" Height="50" Width="180" Background="#545d6a" Foreground="White" Click="add_btn_Click"/>
-            <Button x:Name="update_btn" Content="Update" HorizontalAlignment="Left" Margin="442,564,0,0" VerticalAlignment="Top" Height="50" Width="180" IsEnabled="False" Background="#545d6a" Foreground="White" Click="update_btn_Click"/>
-            <Button x:Name="delete_btn" Content="Delete" HorizontalAlignment="Left" Margin="764,564,0,0" VerticalAlignment="Top" Height="50" Width="180" IsEnabled="False" Background="#545d6a" Foreground="White" Click="delete_btn_Click"/>
-            <Button x:Name="reset_btn" Content="Reset" HorizontalAlignment="Left" Margin="442,660,0,0" VerticalAlignment="Top" Height="50" Width="180" Background="#545d6a" Foreground="White" Click="reset_btn_Click"/>
-            <Button x:Name="back_btn" Content="Back" HorizontalAlignment="Left" Margin="764,660,0,0" VerticalAlignment="Top" Height="50" Width="180" Background="#545d6a" Foreground="White" Click="back_btn_Click"/>
+            <Button 
+                x:Name="add_btn" 
+                Content="Add" 
+                HorizontalAlignment="Left" 
+                Margin="120,564,0,0" 
+                VerticalAlignment="Top" 
+                Height="50" 
+                Width="180" 
+                Background="#545d6a" 
+                Foreground="White" 
+                Click="add_btn_Click"/>
+            <Button 
+                x:Name="update_btn" 
+                Content="Update" 
+                HorizontalAlignment="Left"
+                Margin="442,564,0,0" 
+                VerticalAlignment="Top" 
+                Height="50" Width="180" 
+                IsEnabled="False" 
+                Background="#545d6a" 
+                Foreground="White" 
+                Click="update_btn_Click"/>
+            <Button 
+                x:Name="delete_btn" 
+                Content="Delete" 
+                HorizontalAlignment="Left" 
+                Margin="764,564,0,0" 
+                VerticalAlignment="Top" 
+                Height="50" Width="180" 
+                IsEnabled="False" 
+                Background="#545d6a" 
+                Foreground="White" 
+                Click="delete_btn_Click"/>
+            <Button 
+                x:Name="reset_btn" 
+                Content="Reset" 
+                HorizontalAlignment="Left" 
+                Margin="442,660,0,0" 
+                VerticalAlignment="Top" 
+                Height="50" 
+                Width="180" 
+                Background="#545d6a" 
+                Foreground="White" 
+                Click="reset_btn_Click"/>
+            <Button 
+                x:Name="back_btn" 
+                Content="Back"
+                HorizontalAlignment="Left" 
+                Margin="764,660,0,0" 
+                VerticalAlignment="Top" 
+                Height="50" 
+                Width="180" 
+                Background="#545d6a" 
+                Foreground="White" 
+                Click="back_btn_Click"/>
 
         </Grid>
      </Border>

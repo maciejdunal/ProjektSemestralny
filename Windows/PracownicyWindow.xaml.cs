@@ -76,7 +76,7 @@ namespace ProjektSemestralny.Windows
             }
             catch (Exception exc)
             {
-                MessageBox.Show(exc.Message, "Error");
+                MessageBox.Show(exc.Message + "\n" + "Please provide correct data.", "Error");
             }
         }
 
@@ -103,6 +103,7 @@ namespace ProjektSemestralny.Windows
             add_btn.IsEnabled = true;
             update_btn.IsEnabled = false;
             delete_btn.IsEnabled = false;
+            ID_pracownika_tb.IsEnabled = true;
         }
 
         private void reset_btn_Click(object sender, RoutedEventArgs e)
@@ -220,7 +221,7 @@ namespace ProjektSemestralny.Windows
                 add_btn.IsEnabled = false;
                 update_btn.IsEnabled = true;
                 delete_btn.IsEnabled = true;
-
+                ID_pracownika_tb.IsEnabled = false;
             }
         }
         #endregion
