@@ -2,15 +2,39 @@
 using System.Collections.Generic;
 using System.Windows;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace ProjektSemestralny
 {
-    class DatabaseService
-    {   
-        private const String CONN_STRING = "Data Source=localhost;Initial Catalog = Wypozyczalnia_Gier_komputerowych;";
-        public static SqlConnection con;
+    /// <summary>
+    ///  The <c>DatabaseService</c> class.
+    ///  
+    /// </summary>
+    public class DatabaseService
+    {
+        #region Variables Declaration
+        /// <summary>
+        /// The Windows Authentication connectionString declaration.
+        /// </summary>
+        public const String connectionStringWA =
+            "Data Source=localhost;" +
+            "Integrated Security=True;" +
+            "Trusted_Connection=Yes;" +
+            "TrustServerCertificate=False;" +
+            "Initial Catalog=Wypozyczalnia_Gier_komputerowych;";
 
-        #region OpenConnectionMethod
+        /// <summary>
+        /// The SQL Server Authentication connectionString declaration.
+        /// </summary>
+        public const String connectionStringSSA = 
+            "Data Source=localhost;" +
+            "Integrated Security = False;" +
+            "Initial Catalog=Wypozyczalnia_Gier_komputerowych;";
+
+        public static SqlConnection con;
+        #endregion
+
+        #region OpenConnection Methods
         /// <summary>
         /// The <c>OpenConnection</c> Method .
         /// Connects to the database.
@@ -18,23 +42,39 @@ namespace ProjektSemestralny
         /// </summary>
         /// <param name="username"></param>
         /// <param name="password"></param>
-        public static void OpenConnection(string username, string password)
+        public static bool OpenConnectionSSA(string username, string password)
         {
-
             con = new SqlConnection(AddCredentials(username, password));
-
             try
             {
                 con.Open();
+                return true;
             }
             catch (Exception)
             {
                 MessageBox.Show("Invalid username or password. Please try again", "Error");
+                return false;
+            }
+        }
+        
+
+        public static bool OpenConnectionWA()
+        {
+            con = new SqlConnection(connectionStringWA);
+            try
+            {
+                con.Open();
+                return true;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Invalid username or password. Please try again", "Error");
+                return false;
             }
         }
         #endregion
 
-        #region AddCredentialsMethod
+        #region AddCredentials Method
         /// <summary>
         /// The <c>AddCredentials</c> method.
         /// Takes and saves username parameter and password parameter to ConnectionString
@@ -42,13 +82,13 @@ namespace ProjektSemestralny
         /// <param name="username"></param>
         /// <param name="password"></param>
         /// <returns></returns>
-        private static string AddCredentials(string username, string password)
+        public static string AddCredentials(string username, string password)
         {
-            return CONN_STRING + "User ID=" + username + ";Password=" + password;
+            return connectionStringSSA + "User ID=" + username + ";Password=" + password;
         }
         #endregion
 
-        #region ReadTablesMethod
+        #region ReadTables Method
         /// <summary>
         /// Reads database table list
         /// </summary>
@@ -67,7 +107,6 @@ namespace ProjektSemestralny
                     }
                 }
             }
-
             return result;
         }
         #endregion

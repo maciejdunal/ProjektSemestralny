@@ -12,22 +12,21 @@ namespace ProjektSemestralny.Windows
     /// </summary>
     public partial class ZwrotyWindow : Window
     {
+        #region Window
         /// <summary>
-        /// <c>ZwrotyWindow</c> window initialization
+        /// <c>ZwrotyWindow</c> window initialization in the center of the screen.
         /// </summary>
         public ZwrotyWindow()
         {
             InitializeComponent();
             WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
         }
-        #region Window_Loaded
+
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             this.UpdateDataGrid();
         }
-        #endregion
 
-        #region Window_Closed
         private void Window_Closed(object sender, EventArgs e)
         {
             this.Close();
@@ -39,7 +38,7 @@ namespace ProjektSemestralny.Windows
         #region UpdateDataGridMethod
         /// <summary>
         /// The <c>UpdateDataGrid</c> method.
-        /// Executes a query that returns a given table
+        /// Executes a query that returns a given table.
         /// </summary>
         public void UpdateDataGrid()
         {
@@ -192,7 +191,7 @@ namespace ProjektSemestralny.Windows
         #region MyDataGrid_SelectionChanged
         /// <summary>
         /// The <c>MyDataGrid_SelectionChanged</c> method.
-        /// Retrieves the values from the selected row into the appropriate text fields
+        /// Retrieves the values from the selected row into the appropriate text boxes.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>

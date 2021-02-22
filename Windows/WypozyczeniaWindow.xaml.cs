@@ -12,8 +12,9 @@ namespace ProjektSemestralny.Windows
     /// </summary>
     public partial class WypozyczeniaWindow : Window
     {
+        #region Window
         /// <summary>
-        /// <c>WypozyczeniaWindow</c> window initialization
+        /// <c>WypozyczeniaWindow</c> window initialization in the center of the screen.
         /// </summary>
         public WypozyczeniaWindow()
         {
@@ -21,14 +22,11 @@ namespace ProjektSemestralny.Windows
             WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
         }
 
-        #region Window_Loaded
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             this.UpdateDataGrid();
         }
-        #endregion
 
-        #region Window_Closed
         private void Window_Closed(object sender, EventArgs e)
         {
             this.Close();
@@ -40,7 +38,7 @@ namespace ProjektSemestralny.Windows
         #region UpdateDataGridMethod
         /// <summary>
         /// The <c>UpdateDataGrid</c> method.
-        /// Executes a query that returns a given table
+        /// Executes a query that returns a given table.
         /// </summary>
         public void UpdateDataGrid()
         {
@@ -119,10 +117,10 @@ namespace ProjektSemestralny.Windows
         }
         #endregion
 
-        #region Operations(Add/Update/Delete/Reset)
+        #region Operations(Add/Update/Delete)
         /// <summary>
         /// The <c>Operations</c> method.
-        /// It allows  to Add, Update and Delete operations
+        /// It allows to Add/Update/Delete a row.
         /// </summary>
         /// <param name="statement"></param>
         /// <param name="state"></param>
@@ -197,7 +195,7 @@ namespace ProjektSemestralny.Windows
         #region MyDataGrid_SelectionChanged 
         /// <summary>
         /// The <c>MyDataGrid_SelectionChanged</c> method.
-        /// Retrieves the values from the selected row into the appropriate text fields
+        /// Retrieves the values from the selected row into the appropriate text boxes.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>

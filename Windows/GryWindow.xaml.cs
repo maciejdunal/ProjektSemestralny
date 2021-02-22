@@ -12,8 +12,9 @@ namespace ProjektSemestralny
     /// </summary>
     public partial class GryWindow : Window
     {
+        #region Window
         /// <summary>
-        /// <c>GryWindow</c> window initialization
+        /// <c>GryWindow</c> window initialization in the center of the screen.
         /// </summary>
         public GryWindow()
         {
@@ -21,24 +22,23 @@ namespace ProjektSemestralny
             WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
         }
 
-        #region Window_Loaded
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             this.UpdateDataGrid();
         }
-        #endregion
 
-        #region Window_Closed
         private void Window_Closed(object sender, EventArgs e)
         {
-            Close();
+            this.Close();
+            SelectTableWindow sel = new SelectTableWindow();
+            sel.ShowDialog();
         }
         #endregion
 
         #region UpdateDataGridMethod
         /// <summary>
         /// The <c>UpdateDataGrid</c> method.
-        /// Executes a query that returns a given table
+        /// Executes a query that returns a given table.
         /// </summary>
         public void UpdateDataGrid()
         {
@@ -119,10 +119,10 @@ namespace ProjektSemestralny
         }
         #endregion
 
-        #region Operations(Add/Update/Delete/Reset)
+        #region Operations(Add/Update/Delete)
         /// <summary>
         /// The <c>Operations</c> method.
-        /// It allows  to Add, Update and Delete operations
+        /// It allows to Add/Update/Delete a row.
         /// </summary>
         /// <param name="statement"></param>
         /// <param name="state"></param>
@@ -197,7 +197,7 @@ namespace ProjektSemestralny
         #region MyDataGrid_SelectionChanged
         /// <summary>
         /// The <c>MyDataGrid_SelectionChanged</c> method.
-        /// Retrieves the values from the selected row into the appropriate text fields
+        /// Retrieves the values from the selected row into the appropriate text boxes.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -207,7 +207,6 @@ namespace ProjektSemestralny
             DataRowView dr = dg.SelectedItem as DataRowView;
             if (dr != null)
             {
-
                 ID_gry_tb.Text = dr["ID_gry"].ToString();
                 Nazwa_tb.Text = dr["Nazwa"].ToString();
                 Kategoria_tb.Text = dr["Kategoria"].ToString();

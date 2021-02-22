@@ -12,8 +12,9 @@ namespace ProjektSemestralny
     /// </summary>
     public partial class KlienciWindow : Window
     {
+        #region Window
         /// <summary>
-        /// <c>KlienciWindow</c> window initialization
+        /// <c>KlienciWindow</c> window initialization in the center of the screen.
         /// </summary>
         public KlienciWindow()
         {
@@ -21,14 +22,12 @@ namespace ProjektSemestralny
             WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
         }
 
-        #region Window_Loaded
+        
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             this.UpdateDataGrid();
         }
-        #endregion
 
-        #region Window_Closed
         private void Window_Closed(object sender, EventArgs e)
         {
             this.Close();
@@ -40,28 +39,35 @@ namespace ProjektSemestralny
         #region UpdateDataGridMethod
         /// <summary>
         /// The <c>UpdateDataGrid</c> method.
-        /// Executes a query that returns a given table
+        /// Executes a query that returns a given table.
         /// </summary>
         public void UpdateDataGrid()
         {
-            SqlCommand cmd = DatabaseService.con.CreateCommand();
-            cmd.CommandText =
-                "SELECT " +
-                    "ID_klienta, " +
-                    "Nazwisko, " +
-                    "Imie, " +
-                    "Adres, " +
-                    "Kod_pocztowy, " +
-                    "Data_urodzenia, " +
-                    "Numer_DO " + 
-                "FROM Klienci";
+            try
+            {
+                SqlCommand cmd = DatabaseService.con.CreateCommand();
+                cmd.CommandText =
+                    "SELECT " +
+                        "ID_klienta, " +
+                        "Nazwisko, " +
+                        "Imie, " +
+                        "Adres, " +
+                        "Kod_pocztowy, " +
+                        "Data_urodzenia, " +
+                        "Numer_DO " +
+                    "FROM Klienci";
 
-            cmd.CommandType = CommandType.Text;
-            SqlDataReader dr = cmd.ExecuteReader();
-            DataTable dt = new DataTable();
-            dt.Load(dr);
-            MyDataGrid.ItemsSource = dt.DefaultView;
-            dr.Close();
+                cmd.CommandType = CommandType.Text;
+                SqlDataReader dr = cmd.ExecuteReader();
+                DataTable dt = new DataTable();
+                dt.Load(dr);
+                MyDataGrid.ItemsSource = dt.DefaultView;
+                dr.Close();
+            }
+            catch(Exception exc)
+            {
+                MessageBox.Show(exc.Message, "Error");
+            }
         }
         #endregion
 
@@ -121,10 +127,10 @@ namespace ProjektSemestralny
         }
         #endregion
 
-        #region Operations(Add/Update/Delete/Reset)
+        #region Operations(Add/Update/Delete)
         /// <summary>
         /// The <c>Operations</c> method.
-        /// It allows  to Add, Update and Delete operations
+        /// It allows to Add/Update/Delete a row.
         /// </summary>
         /// <param name="statement"></param>
         /// <param name="state"></param>
@@ -204,7 +210,7 @@ namespace ProjektSemestralny
         #region MyDataGrid_SelectionChanged
         /// <summary>
         /// The <c>MyDataGrid_SelectionChanged</c> method.
-        /// Retrieves the values from the selected row into the appropriate text fields
+        /// Retrieves the values from the selected row into the appropriate text boxes.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>

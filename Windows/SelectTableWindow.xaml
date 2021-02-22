@@ -10,10 +10,8 @@
         <StackPanel Margin="20" >
             <Label Content="Select table" Foreground="White" FontSize="25" HorizontalAlignment="Center"/>
             <Separator></Separator>
-            <ComboBox x:Name="tableList"  Width="200"  Height="25" Background="#545d6a" Margin="5" FontSize="14" SelectedItem="Binding Selectedtable"/>
-            <Button x:Name="selectTableButton" Content="OK" Margin="60 15" Background="#545d6a" Foreground="White" Click="selectTableButton_Click"/>
-
-            <Button x:Name="cancelTableButton" Content="Cancel" Margin="60 0" Background="#545d6a" Foreground="White" Click="cancelTableButton_Click"/>
+            <ComboBox x:Name="tableList"  Width="250"  Height="25" Margin="10" FontSize="14" SelectedItem="Binding Selectedtable"/>
+            <Button x:Name="selectTableButton" Content="OK" Height="40" Margin="60 15" Background="#545d6a" Foreground="White" Click="selectTableButton_Click"/>
 
         </StackPanel>
     </Border>

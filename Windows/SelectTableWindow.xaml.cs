@@ -10,8 +10,9 @@ namespace ProjektSemestralny
     /// </summary>
     public partial class SelectTableWindow : Window
     {
+        #region Window
         ///<summary>
-        /// <c>SelectTableWindow</c> initialization, calls the <c>RenderTables</c> method.
+        /// <c>SelectTableWindow</c> initialization  in the center of the screen, calls the <c>RenderTables</c> method.
         /// </summary>
         public SelectTableWindow()
         {
@@ -19,19 +20,16 @@ namespace ProjektSemestralny
             RenderTables();
             WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
         }
-        #region Window_Closed
         private void Window_Closed(object sender, System.EventArgs e)
         {
-            this.Close();
-            LoginWindow log = new LoginWindow();
-            log.ShowDialog();
+            Application.Current.Shutdown();
         }
         #endregion
 
         #region RenderTablesMethod
         /// <summary>
         /// The <c>RenderTables</c> method
-        /// Writes the Query result to the dropdown
+        /// Writes the table list(Query result) to the <c>tableList</c> dropdown.
         /// </summary>
         public void RenderTables()
         {
@@ -43,9 +41,9 @@ namespace ProjektSemestralny
 
             tableList.SelectedIndex = 0;
         }
-#endregion
+        #endregion
 
-        #region Buttons
+        #region Button
         /// <summary>
         /// The <c>selectTableButton_Click</c> method.
         /// Opens table management for selected table
@@ -56,19 +54,12 @@ namespace ProjektSemestralny
         {
             SelectedTable();
         }
-
-        private void cancelTableButton_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
-            LoginWindow log = new LoginWindow();
-            log.ShowDialog();
-        }
         #endregion
 
         #region SelectedTable method
         /// <summary>
         /// The <c>SelectedTable</c> method.
-        /// Opens table management for selected table
+        /// Opens table management for selected table from combobox
         /// </summary>
         public void SelectedTable()
         {
@@ -79,25 +70,25 @@ namespace ProjektSemestralny
                 KlienciWindow kli = new KlienciWindow();
                 kli.ShowDialog();
             }
-            if (selectedItem == "Gry")
+            else if (selectedItem == "Gry")
             {
                 this.Hide();
                 GryWindow nextWindow = new GryWindow();
                 nextWindow.ShowDialog();
             }
-            if (selectedItem == "Pracownicy")
+            else if (selectedItem == "Pracownicy")
             {
                 this.Hide();
                 Windows.PracownicyWindow nextWindow = new Windows.PracownicyWindow();
                 nextWindow.ShowDialog();
             }
-            if (selectedItem == "Wypozyczenia")
+            else if (selectedItem == "Wypozyczenia")
             {
                 this.Hide();
                 Windows.WypozyczeniaWindow nextWindow = new Windows.WypozyczeniaWindow();
                 nextWindow.ShowDialog();
             }
-            if (selectedItem == "Zwroty")
+            else if (selectedItem == "Zwroty")
             {
                 this.Hide();
                 Windows.ZwrotyWindow nextWindow = new Windows.ZwrotyWindow();

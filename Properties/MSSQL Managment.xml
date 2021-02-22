@@ -1,0 +1,386 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ProjektSemestralny</name>
+    </assembly>
+    <members>
+        <member name="T:ProjektSemestralny.DatabaseService">
+            <summary>
+             The <c>DatabaseService</c> class.
+             
+            </summary>
+        </member>
+        <member name="F:ProjektSemestralny.DatabaseService.connectionStringWA">
+            <summary>
+            The Windows Authentication connectionString declaration.
+            </summary>
+        </member>
+        <member name="F:ProjektSemestralny.DatabaseService.connectionStringSSA">
+            <summary>
+            The SQL Server Authentication connectionString declaration.
+            </summary>
+        </member>
+        <member name="M:ProjektSemestralny.DatabaseService.OpenConnectionSSA(System.String,System.String)">
+            <summary>
+            The <c>OpenConnection</c> Method .
+            Connects to the database.
+            Takes username parameter and password parameter to use it in connection to database.
+            </summary>
+            <param name="username"></param>
+            <param name="password"></param>
+        </member>
+        <member name="M:ProjektSemestralny.DatabaseService.AddCredentials(System.String,System.String)">
+            <summary>
+            The <c>AddCredentials</c> method.
+            Takes and saves username parameter and password parameter to ConnectionString
+            </summary>
+            <param name="username"></param>
+            <param name="password"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ProjektSemestralny.DatabaseService.ReadTables">
+            <summary>
+            Reads database table list
+            </summary>
+            <returns>Table List</returns>
+        </member>
+        <member name="T:ProjektSemestralny.Windows.PracownicyWindow">
+            <summary>
+            Interaction logic for PracownicyWindow.xaml
+            </summary>
+            <summary>
+            PracownicyWindow
+            </summary>
+        </member>
+        <member name="M:ProjektSemestralny.Windows.PracownicyWindow.#ctor">
+            <summary>
+            <c>PracownicyWindow</c> window initialization in the center of the screen.
+            </summary>
+        </member>
+        <member name="M:ProjektSemestralny.Windows.PracownicyWindow.UpdateDataGrid">
+            <summary>
+            The <c>UpdateDataGrid</c> method.
+            Executes a query that returns a given table.
+            </summary>
+        </member>
+        <member name="M:ProjektSemestralny.Windows.PracownicyWindow.Operations(System.String,System.Int32)">
+            <summary>
+            The <c>Operations</c> method.
+            It allows to Add/Update/Delete a row.
+            </summary>
+            <param name="statement"></param>
+            <param name="state"></param>
+        </member>
+        <member name="M:ProjektSemestralny.Windows.PracownicyWindow.MyDataGrid_SelectionChanged(System.Object,System.Windows.Controls.SelectionChangedEventArgs)">
+            <summary>
+            The <c>MyDataGrid_SelectionChanged</c> method.
+            Retrieves the values from the selected row into the appropriate text boxes.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:ProjektSemestralny.Windows.PracownicyWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ProjektSemestralny.Windows.WypozyczeniaWindow">
+            <summary>
+            Interaction logic for WypozyczeniaWindow.xaml
+            </summary>
+            <summary>
+            WypozyczeniaWindow
+            </summary>
+        </member>
+        <member name="M:ProjektSemestralny.Windows.WypozyczeniaWindow.#ctor">
+            <summary>
+            <c>WypozyczeniaWindow</c> window initialization in the center of the screen.
+            </summary>
+        </member>
+        <member name="M:ProjektSemestralny.Windows.WypozyczeniaWindow.UpdateDataGrid">
+            <summary>
+            The <c>UpdateDataGrid</c> method.
+            Executes a query that returns a given table.
+            </summary>
+        </member>
+        <member name="M:ProjektSemestralny.Windows.WypozyczeniaWindow.Operations(System.String,System.Int32)">
+            <summary>
+            The <c>Operations</c> method.
+            It allows to Add/Update/Delete a row.
+            </summary>
+            <param name="statement"></param>
+            <param name="state"></param>
+        </member>
+        <member name="M:ProjektSemestralny.Windows.WypozyczeniaWindow.MyDataGrid_SelectionChanged(System.Object,System.Windows.Controls.SelectionChangedEventArgs)">
+            <summary>
+            The <c>MyDataGrid_SelectionChanged</c> method.
+            Retrieves the values from the selected row into the appropriate text boxes.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:ProjektSemestralny.Windows.WypozyczeniaWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ProjektSemestralny.Windows.ZwrotyWindow">
+            <summary>
+            Interaction logic for ZwrotyWindow.xaml
+            </summary>
+            <summary>
+            ZwrotyWindow
+            </summary>
+        </member>
+        <member name="M:ProjektSemestralny.Windows.ZwrotyWindow.#ctor">
+            <summary>
+            <c>ZwrotyWindow</c> window initialization in the center of the screen.
+            </summary>
+        </member>
+        <member name="M:ProjektSemestralny.Windows.ZwrotyWindow.UpdateDataGrid">
+            <summary>
+            The <c>UpdateDataGrid</c> method.
+            Executes a query that returns a given table.
+            </summary>
+        </member>
+        <member name="M:ProjektSemestralny.Windows.ZwrotyWindow.Operations(System.String,System.Int32)">
+            <summary>
+            The <c>Operations</c> method.
+            It allows  to Add, Update and Delete operations
+            </summary>
+            <param name="statement"></param>
+            <param name="state"></param>
+        </member>
+        <member name="M:ProjektSemestralny.Windows.ZwrotyWindow.MyDataGrid_SelectionChanged(System.Object,System.Windows.Controls.SelectionChangedEventArgs)">
+            <summary>
+            The <c>MyDataGrid_SelectionChanged</c> method.
+            Retrieves the values from the selected row into the appropriate text boxes.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:ProjektSemestralny.Windows.ZwrotyWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ProjektSemestralny.SelectTableWindow">
+            <summary>
+            Interaction logic for Window1.xaml
+            </summary>
+            <summary>
+            SelectTableWindow
+            </summary>
+        </member>
+        <member name="M:ProjektSemestralny.SelectTableWindow.#ctor">
+            <summary>
+             <c>SelectTableWindow</c> initialization  in the center of the screen, calls the <c>RenderTables</c> method.
+             </summary>
+        </member>
+        <member name="M:ProjektSemestralny.SelectTableWindow.RenderTables">
+            <summary>
+            The <c>RenderTables</c> method
+            Writes the table list(Query result) to the <c>tableList</c> dropdown.
+            </summary>
+        </member>
+        <member name="M:ProjektSemestralny.SelectTableWindow.selectTableButton_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            The <c>selectTableButton_Click</c> method.
+            Opens table management for selected table
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:ProjektSemestralny.SelectTableWindow.SelectedTable">
+            <summary>
+            The <c>SelectedTable</c> method.
+            Opens table management for selected table from combobox
+            </summary>
+        </member>
+        <member name="M:ProjektSemestralny.SelectTableWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ProjektSemestralny.KlienciWindow">
+            <summary>
+            Interaction logic for KlienciWindow.xaml
+            </summary>
+            <summary>
+            KlienciWindow
+            </summary>
+        </member>
+        <member name="M:ProjektSemestralny.KlienciWindow.#ctor">
+            <summary>
+            <c>KlienciWindow</c> window initialization in the center of the screen.
+            </summary>
+        </member>
+        <member name="M:ProjektSemestralny.KlienciWindow.UpdateDataGrid">
+            <summary>
+            The <c>UpdateDataGrid</c> method.
+            Executes a query that returns a given table.
+            </summary>
+        </member>
+        <member name="M:ProjektSemestralny.KlienciWindow.Operations(System.String,System.Int32)">
+            <summary>
+            The <c>Operations</c> method.
+            It allows to Add/Update/Delete a row.
+            </summary>
+            <param name="statement"></param>
+            <param name="state"></param>
+        </member>
+        <member name="M:ProjektSemestralny.KlienciWindow.MyDataGrid_SelectionChanged(System.Object,System.Windows.Controls.SelectionChangedEventArgs)">
+            <summary>
+            The <c>MyDataGrid_SelectionChanged</c> method.
+            Retrieves the values from the selected row into the appropriate text boxes.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:ProjektSemestralny.KlienciWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ProjektSemestralny.GryWindow">
+            <summary>
+            Interaction logic for GryWindow.xaml
+            </summary>
+            <summary>
+            GryWindow
+            </summary>
+        </member>
+        <member name="M:ProjektSemestralny.GryWindow.#ctor">
+            <summary>
+            <c>GryWindow</c> window initialization in the center of the screen.
+            </summary>
+        </member>
+        <member name="M:ProjektSemestralny.GryWindow.UpdateDataGrid">
+            <summary>
+            The <c>UpdateDataGrid</c> method.
+            Executes a query that returns a given table.
+            </summary>
+        </member>
+        <member name="M:ProjektSemestralny.GryWindow.Operations(System.String,System.Int32)">
+            <summary>
+            The <c>Operations</c> method.
+            It allows to Add/Update/Delete a row.
+            </summary>
+            <param name="statement"></param>
+            <param name="state"></param>
+        </member>
+        <member name="M:ProjektSemestralny.GryWindow.MyDataGrid_SelectionChanged(System.Object,System.Windows.Controls.SelectionChangedEventArgs)">
+            <summary>
+            The <c>MyDataGrid_SelectionChanged</c> method.
+            Retrieves the values from the selected row into the appropriate text boxes.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:ProjektSemestralny.GryWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ProjektSemestralny.App">
+            <summary>
+            Interaction logic for App.xaml
+            </summary>
+            <summary>
+            App
+            </summary>
+        </member>
+        <member name="M:ProjektSemestralny.App.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:ProjektSemestralny.App.Main">
+            <summary>
+            Application Entry Point.
+            </summary>
+        </member>
+        <member name="T:ProjektSemestralny.LoginWindow">
+            <summary>
+            Interaction logic for LoginWindow.xaml
+            </summary>
+            <summary>
+            LoginWindow
+            </summary>
+        </member>
+        <member name="M:ProjektSemestralny.LoginWindow.#ctor">
+            <summary>
+            <c>Login</c> window initialization in the center of the screen.
+            </summary>
+        </member>
+        <member name="M:ProjektSemestralny.LoginWindow.connectButton_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            The <c>connectButton_Click</c> method.
+            Performing login to the database on 'Connect' button click.
+            Uses DatabaseService.openConnection method and takes Login and Password parameters.
+            Uses <c>OpenSelectTableWindow</c> method to open the SelectTableWindow window.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:ProjektSemestralny.LoginWindow.cancelButton_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            The <c>cancelButton_Click</c> method.
+            Closing application on 'Cancel' button click.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:ProjektSemestralny.LoginWindow.Login">
+            <summary>
+            The <c>Login</c> method.
+            Connects to SQL Server using Windows Authentication
+            </summary>
+        </member>
+        <member name="M:ProjektSemestralny.LoginWindow.WindowsAuthentication">
+            <summary>
+            The <c>WindowsAuthentication</c> method.
+            Connects to SQL Server using Windows Authentication
+            Uses DatabaseService.OpenConnectionWA method.
+            </summary>
+        </member>
+        <member name="M:ProjektSemestralny.LoginWindow.SqlServerAuthentication">
+            <summary>
+            The <c>SqlServerAuthentication</c> method.
+            Connects to SQL Server using SQL Server Authentication.
+            Uses DatabaseService.OpenConnectionSSA method and takes Login and Password parameters.
+            </summary>
+        </member>
+        <member name="M:ProjektSemestralny.LoginWindow.loginMethod_SelectionChanged(System.Object,System.Windows.Controls.SelectionChangedEventArgs)">
+            <summary>
+            The <c>loginMethod_SelectionChanged</c> method.
+            Checks the selected authentication. 
+            If 'Windows Authentication' is selected, Login and Password text boxes are blocked. 
+            If 'SQL Server Authentication' is selected, Login and Password text boxes are unlocked
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:ProjektSemestralny.LoginWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ProjektSemestralny.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:ProjektSemestralny.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:ProjektSemestralny.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+    </members>
+</doc>
