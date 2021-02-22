@@ -88,11 +88,9 @@ namespace ProjektSemestralny
             try
             {
                 DatabaseService.OpenConnectionWA();
-                // this.Hide();
                 SelectTableWindow sec = new SelectTableWindow();
                 sec.Show();
                 this.Hide();
-            //sec.ShowDialog();
 
             }
             catch (Exception)
@@ -112,11 +110,9 @@ namespace ProjektSemestralny
             try
             {
                 var connectionSuccessful = DatabaseService.OpenConnectionSSA(logintb.Text, passwordtb.Password);
-                // this.Hide();
                 SelectTableWindow sec = new SelectTableWindow();
                 sec.Show();
                 this.Hide();
-                //sec.ShowDialog();
             }
             catch (Exception)
             {
