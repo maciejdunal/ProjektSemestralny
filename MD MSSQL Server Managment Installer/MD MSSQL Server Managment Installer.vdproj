@@ -15,14 +15,8 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_276DCA3F09E1442974AA00FF686C1C3E"
-        "OwnerKey" = "8:_8171296F2DEF4878980CBA2B57A9E6AA"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_276DCA3F09E1442974AA00FF686C1C3E"
-        "OwnerKey" = "8:_C975ADCC9FD442B36A92522E3C5A74A6"
+        "MsmKey" = "8:_1F4E1EACCFD249899D10B30C5664EB16"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -39,19 +33,13 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_9B0EB2E1151A406F8A210F6E96341F2D"
+        "MsmKey" = "8:_D7A58C821C764FDEA61490F9689C2371"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_C975ADCC9FD442B36A92522E3C5A74A6"
-        "OwnerKey" = "8:_8171296F2DEF4878980CBA2B57A9E6AA"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_DE98FFC8A9054192AF45F0B8BA40BF40"
+        "MsmKey" = "8:_E18DB663DDFC4E45AC816BB98AC8BB9A"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -65,18 +53,6 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_8171296F2DEF4878980CBA2B57A9E6AA"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_C975ADCC9FD442B36A92522E3C5A74A6"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_276DCA3F09E1442974AA00FF686C1C3E"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -110,6 +86,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
             }
         }
         "Release"
@@ -134,6 +118,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
             }
         }
     }
@@ -164,23 +156,12 @@
         }
         "File"
         {
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_276DCA3F09E1442974AA00FF686C1C3E"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_1F4E1EACCFD249899D10B30C5664EB16"
             {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_276DCA3F09E1442974AA00FF686C1C3E"
-                    {
-                    "Name" = "8:EntityFramework.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:EntityFramework.dll"
-            "TargetName" = "8:"
+            "SourcePath" = "8:..\\SQL Scripts\\Enable LoginMode.sql"
+            "TargetName" = "8:Enable LoginMode.sql"
             "Tag" = "8:"
-            "Folder" = "8:_FA9EAC5C3FD94051AB874CF0AA39CFF7"
+            "Folder" = "8:_21C811C917F645E693C9546E2656C29E"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -192,7 +173,7 @@
             "PackageAs" = "3:1"
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6B058D9CDC6D4A1FBD13D0715927CB87"
@@ -215,10 +196,10 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9B0EB2E1151A406F8A210F6E96341F2D"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D7A58C821C764FDEA61490F9689C2371"
             {
-            "SourcePath" = "8:..\\..\\..\\..\\..\\Desktop\\Wypozyczalnia_Gier_komputerowych.mdf"
-            "TargetName" = "8:Wypozyczalnia_Gier_komputerowych.mdf"
+            "SourcePath" = "8:..\\SQL Scripts\\Create DB.sql"
+            "TargetName" = "8:Create DB.sql"
             "Tag" = "8:"
             "Folder" = "8:_21C811C917F645E693C9546E2656C29E"
             "Condition" = "8:"
@@ -235,41 +216,10 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_C975ADCC9FD442B36A92522E3C5A74A6"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E18DB663DDFC4E45AC816BB98AC8BB9A"
             {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_C975ADCC9FD442B36A92522E3C5A74A6"
-                    {
-                    "Name" = "8:EntityFramework.SqlServer.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:EntityFramework.SqlServer.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_FA9EAC5C3FD94051AB874CF0AA39CFF7"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_DE98FFC8A9054192AF45F0B8BA40BF40"
-            {
-            "SourcePath" = "8:..\\DatabaseScript.sql"
-            "TargetName" = "8:DatabaseScript.sql"
+            "SourcePath" = "8:..\\SQL Scripts\\Create User.sql"
+            "TargetName" = "8:Create User.sql"
             "Tag" = "8:"
             "Folder" = "8:_21C811C917F645E693C9546E2656C29E"
             "Condition" = "8:"
@@ -357,7 +307,7 @@
                 {
                     "{9EF0B969-E518-4E46-987F-47570745A589}:_21C811C917F645E693C9546E2656C29E"
                     {
-                    "Name" = "8:DB files"
+                    "Name" = "8:SQL Scripts"
                     "AlwaysCreate" = "11:FALSE"
                     "Condition" = "8:"
                     "Transitive" = "11:FALSE"
@@ -394,9 +344,9 @@
         "Product"
         {
         "Name" = "8:Microsoft Visual Studio"
-        "ProductName" = "8:MD MSSQL Server Managment Installer"
+        "ProductName" = "8:MD MSSQL Server Managment"
         "ProductCode" = "8:{61B10DC3-B0C4-4BF3-90F7-1EAF43CE2712}"
-        "PackageCode" = "8:{5ED66104-25E8-4BAB-A004-2718989663AD}"
+        "PackageCode" = "8:{1E330712-6C36-43DA-98CE-977BC15A45F5}"
         "UpgradeCode" = "8:{5881D70C-CB21-49B0-B4DE-D87183F4317B}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -407,11 +357,11 @@
         "Manufacturer" = "8:Maciej Dunal"
         "ARPHELPTELEPHONE" = "8:7070808989"
         "ARPHELPLINK" = "8:https://md.com/support"
-        "Title" = "8:MD MSSQL Server Managment Installer"
+        "Title" = "8:MD MSSQL Server Managment"
         "Subject" = "8:"
         "ARPCONTACT" = "8:Maciej Dunal"
         "Keywords" = "8:"
-        "ARPCOMMENTS" = "8:MD SQL Server Managment Studio Installer"
+        "ARPCOMMENTS" = "8:MD SQL Server Managment Studio"
         "ARPURLINFOABOUT" = "8:https://md.com/"
         "ARPPRODUCTICON" = "8:_6B058D9CDC6D4A1FBD13D0715927CB87"
         "ARPIconIndex" = "3:0"
