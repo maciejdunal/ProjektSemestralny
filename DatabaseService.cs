@@ -68,7 +68,7 @@ namespace ProjektSemestralny
             }
             catch (Exception)
             {
-                MessageBox.Show("Invalid username or password. Please try again", "Error");
+                MessageBox.Show("Can't connect to database, check application documentation.", "Error");
                 return false;
             }
         }
