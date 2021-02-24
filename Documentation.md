@@ -12,7 +12,9 @@ Basic requirements are 32 bit Windows 7, 2 processors, and 2.0 GB of RAM - SSD d
 1. Open [Github.com/maciejdunal/ProjektSemestralny](https://github.com/maciejdunal/ProjektSemestralny)  Project.
 2. Open *MD MSSQL Server Managment Installer/Release* folder then click on *MD MSSQL Server Managment Installer.msi*
 3. Click on *Download* button (It is virus free file, check [VirusTotal Scan Log](https://www.virustotal.com/gui/file/410f1106003cb672704749ba0fb7b51485afe4d066fea8b88427eeffc90051de/detection))
+
 ![Github Installation folder](Images/Documentation/GithubInstallationfolder.png "Github Installation folder")
+
 4. Install an application using the downloaded file.
 
 
@@ -27,7 +29,9 @@ Basic requirements are 32 bit Windows 7, 2 processors, and 2.0 GB of RAM - SSD d
 #### Steps:
 1. Open *installation folder/SQL Scripts* folder
 2. Right-click on **Create DB.sql** file
+
 ![Create Database](Images/Documentation/CreateDB.png "Create Database")
+
 3. From context menu select Open with->SSMS
 4. Provide correct Server type, Server name, then click *Connect* button
 5. Click on *Execute* button or type *F5*
@@ -40,7 +44,9 @@ or
 2. From Top Menu select File->Connect to Object Explorer...
 3. Provide correct Server type, Server name, then click *Connect* button
 4. Click on *New Query* button or type *CTRL+N*
+
 ![New Query](Images/Documentation/NewQuery.png "New Query")
+
 5. Copy and paste into querty following code:
 
 ```
@@ -141,6 +147,7 @@ GO
 2. Click on dropdown at the middle of the *Connect to database...* window
 3. Select **Windows Authentication**
 4. Click on *Connect* button
+
 ![WA](Images/Documentation/WA.png "WA")
 
 ## Creating Login User and User in SQL Server
@@ -149,7 +156,9 @@ GO
 #### Steps:
 1. Open *installation folder/SQL Scripts* folder
 2. Right-click on **Create User.sql** file
+
 ![Create User](Images/Documentation/CreateUser.png "Create User")
+
 3. From context menu select Open with->SSMS
 4. Provide correct Server type, Server name, then click *Connect* button
 5. Click on *Execute* button or type *F5*
@@ -162,7 +171,9 @@ or
 2. From Top Menu select File->Connect to Object Explorer...
 3. Provide correct Server type, Server name, then click *Connect* button
 4. Click on *New Query* button or type *CTRL+N*
+
 ![New Query](Images/Documentation/NewQuery.png "New Query")
+
 5. Copy and paste into querty following code:
 
 ```
@@ -185,7 +196,9 @@ ALTER ROLE [db_owner] ADD MEMBER [user]
 #### Steps:
 1. Open *installation folder/SQL Scripts* folder
 2. Right-click on **Enable LoginMode.sql** file
+
 ![Enable SQL Server LoginMode](Images/Documentation/EnableLoginMode.png "Enable SQL Server LoginMode")
+
 3. From context menu select Open with->SSMS
 4. Provide correct Server type, Server name, then click *Connect* button
 5. Click on *Execute* button or type *F5*
@@ -197,7 +210,9 @@ or
 2. From Top Menu select File->Connect to Object Explorer...
 3. Provide correct Server type, Server name, then click *Connect* button
 4. Click on *New Query* button or type *CTRL+N*
+
 ![New Query](Images/Documentation/NewQuery.png "New Query")
+
 5. Copy and paste into querty following code:
 
 ```
@@ -225,6 +240,7 @@ GO
 3. Select **SQL Server Authentication**
 4. Enter correct user name and password (in case of example from above user/1234)
 5. Click on *Connect* button
+
 ![SSA](Images/Documentation/SSA.png "SSA")
 
 ## Enabling TCP/IP and Names Pipes Protocols
@@ -236,9 +252,12 @@ GO
 3. Select proper instance (in case of example *Protocols for MSSQLSERVER*)
 4. Right-Click-> Enabled on Named Pipes
 5. Right-Click-> Enabled on TCP/IP
+
 ![Protocols](Images/Documentation/Protocols.png "Protocols")
+
 6. Open Run->services.msc
 7. Restart SQL Server service
+
 ![SQLServerService](Images/Documentation/SQLServerService.png "SQLServerService")
 
 
@@ -273,15 +292,20 @@ Buttons:
 ### Steps:
 1. Enter the appropriate value for a given column for each textbox (e.g ID wypozyczenia: 6 ; ID Gry: 3 ; ID Pracownika: 4 ; ID klienta: 3 ; Data wypozyczenia 2/24/2021)
 2. Click *Add* button
+
 ![Add operation](Images/Documentation/Add.png "Add operation")
 
 ## Update operation
 >It is possible to update any existing row from table following steps from below:
 ### Steps:
 1. Click on desired row to update from datagrid (e.g 6th)
+
 ![Select row](Images/Documentation/UpdateClick.png "Select row")
+
 2. Enter the appropriate value for a given column for each textbox (e.g ID Gry: 1 ; ID Pracownika: 2 ; ID klienta: 2 ; Data wypozyczenia 2/24/2021)
+
 ![Update row](Images/Documentation/Update.png "Update row")
+
 3. Click *Update* button
 
 > Note: <br> No possibility to upgrade a primary key value!
@@ -290,4 +314,5 @@ Buttons:
 ### Steps:
 1. Click on desired row to update from datagrid (e.g 4th)
 2. Click *Delete* button
+
 ![Delete row](Images/Documentation/Delete.png "Delete row")
