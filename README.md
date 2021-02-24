@@ -315,7 +315,7 @@ Buttons:
 ## Delete operation
 >It is possible to delete any row from table following steps from below:
 ### Steps:
-1. Click on desired row to update from datagrid (e.g 4th)
+1. Click on desired row to delete from datagrid (e.g 4th)
 2. Click *Delete* button
 
 ![Delete row](Images/Documentation/Delete.png "Delete row")
